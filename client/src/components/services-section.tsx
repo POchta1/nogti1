@@ -9,8 +9,6 @@ import {
   Clock,
   ArrowRight
 } from "lucide-react";
-import useEmblaCarousel from 'embla-carousel-react';
-import { useEffect, useCallback } from 'react';
 import type { Service } from "@shared/schema";
 
 const iconMap = {
@@ -27,34 +25,9 @@ export default function ServicesSection() {
     queryKey: ["/api/services"],
   });
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
-    loop: true,
-    align: 'start',
-    dragFree: false,
-    containScroll: 'trimSnaps',
-    slidesToScroll: 1
-  });
-
-  // Auto-scroll functionality for infinite smooth movement
-  useEffect(() => {
-    if (!emblaApi) return;
-    
-    let intervalId: NodeJS.Timeout;
-    
-    const scrollNext = () => {
-      emblaApi.scrollNext();
-    };
-
-    // Start auto-scroll immediately
-    intervalId = setInterval(scrollNext, 2500); // Every 2.5 seconds for smooth movement
-
-    return () => {
-      if (intervalId) clearInterval(intervalId);
-    };
-  }, [emblaApi]);
-
-  // Duplicate services for infinite scroll effect
-  const infiniteServices = services.length > 0 ? [...services, ...services, ...services] : [];
+  // Create multiple copies for truly infinite scroll
+  const infiniteServices = services.length > 0 ? 
+    [...services, ...services, ...services, ...services, ...services] : [];
 
   if (isLoading) {
     return (
@@ -102,16 +75,16 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        {/* Services Carousel */}
-        <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex transition-transform ease-linear">
+        {/* Services Carousel - Truly Infinite */}
+        <div className="overflow-hidden relative">
+          <div className="flex animate-scroll">
             {infiniteServices.map((service, index) => {
               const IconComponent = iconMap[service.icon as keyof typeof iconMap] || Sparkles;
               
               return (
                 <div
                   key={`${service.id}-${index}`}
-                  className="flex-none mx-4 w-80 transition-all duration-500 ease-in-out"
+                  className="flex-none mx-4 w-80"
                   style={{ minWidth: '320px', maxWidth: '320px' }}
                 >
                   <div className="group relative bg-white border border-gray-100 rounded-3xl p-6 md:p-8 hover:shadow-2xl hover:border-gray-200 transition-all duration-500 h-96 flex flex-col">
