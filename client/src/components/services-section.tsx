@@ -111,9 +111,9 @@ export default function ServicesSection() {
                 <div
                   key={`${service.id}-${index}`}
                   className="flex-none mx-4 w-80 transition-all duration-700"
-                  style={{ minWidth: '320px' }}
+                  style={{ minWidth: '320px', maxWidth: '320px' }}
                 >
-                  <div className="group relative bg-white border border-gray-100 rounded-3xl p-6 md:p-8 hover:shadow-2xl hover:border-gray-200 transition-all duration-500 h-full">
+                  <div className="group relative bg-white border border-gray-100 rounded-3xl p-6 md:p-8 hover:shadow-2xl hover:border-gray-200 transition-all duration-500 h-96 flex flex-col">
                     {/* Icon */}
                     <div className="relative mb-6">
                       <div className="w-16 h-16 bg-gradient-to-br from-gray-900 to-gray-700 rounded-2xl flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-300">
@@ -123,18 +123,18 @@ export default function ServicesSection() {
                     </div>
 
                     {/* Content */}
-                    <div className="space-y-4">
-                      <h3 className="text-xl md:text-2xl font-bold text-black mb-4 group-hover:text-gray-700 transition-colors">
+                    <div className="flex flex-col h-full">
+                      <h3 className="text-xl font-bold text-black mb-3 group-hover:text-gray-700 transition-colors">
                         {service.name}
                       </h3>
-                      <p className="text-sm text-gray-600 mb-6 leading-relaxed">
+                      <p className="text-sm text-gray-600 mb-4 leading-relaxed flex-grow">
                         {service.description}
                       </p>
                       
                       {/* Price and Duration */}
-                      <div className="space-y-4 mb-6">
+                      <div className="mb-4">
                         <div className="flex items-center justify-between">
-                          <span className="text-2xl md:text-3xl font-bold text-black">
+                          <span className="text-2xl font-bold text-black">
                             {service.price}
                           </span>
                           <div className="flex items-center space-x-2 text-gray-500">
@@ -150,7 +150,7 @@ export default function ServicesSection() {
                           const element = document.getElementById("contact");
                           if (element) element.scrollIntoView({ behavior: "smooth" });
                         }}
-                        className="w-full bg-black text-white py-3 px-6 text-sm rounded-full hover:bg-gray-800 transition-colors flex items-center justify-center space-x-2 group/button"
+                        className="w-full bg-black text-white py-3 px-6 text-sm rounded-full hover:bg-gray-800 transition-colors flex items-center justify-center space-x-2 group/button mt-auto"
                       >
                         <span>Записаться</span>
                         <ArrowRight size={16} className="group-hover/button:translate-x-1 transition-transform" />
