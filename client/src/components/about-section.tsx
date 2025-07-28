@@ -75,9 +75,10 @@ export default function AboutSection() {
             <div className="relative">
               <div className="w-full h-[600px] rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=1200"
-                  alt="Портрет мастера маникюра в элегантной студии"
-                  className="w-full h-full object-cover"
+                  src="/attached_assets/mis_beauty_coworking_1753740224874_1753740253451.jpeg"
+                  alt="Портрет мастера маникюра - девушка в желтом платье"
+                  className="w-full h-full object-cover object-center"
+                  style={{ objectPosition: 'center center' }}
                 />
               </div>
 
