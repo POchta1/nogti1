@@ -9,7 +9,7 @@ export default function AboutSection() {
             <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gray-800 mb-6">
               О мастере
             </h2>
-            <h3 className="text-2xl font-playfair text-dusty-rose mb-6">
+            <h3 className="text-2xl font-playfair text-elegant-gold mb-6">
               Мария Соло
             </h3>
 
@@ -36,14 +36,14 @@ export default function AboutSection() {
             </div>
 
             <div className="mt-8 grid grid-cols-2 gap-6">
-              <div className="text-center p-4 bg-blush/20 rounded-2xl">
-                <div className="text-3xl font-bold text-dusty-rose font-playfair">
+              <div className="text-center p-4 bg-gray-100 rounded-2xl">
+                <div className="text-3xl font-bold text-elegant-gold font-playfair">
                   500+
                 </div>
                 <div className="text-gray-600">Довольных клиентов</div>
               </div>
-              <div className="text-center p-4 bg-blush/20 rounded-2xl">
-                <div className="text-3xl font-bold text-dusty-rose font-playfair">
+              <div className="text-center p-4 bg-gray-100 rounded-2xl">
+                <div className="text-3xl font-bold text-elegant-gold font-playfair">
                   5
                 </div>
                 <div className="text-gray-600">Лет опыта</div>
