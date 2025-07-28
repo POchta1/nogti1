@@ -4,31 +4,32 @@
 
 :root {
   --background: hsl(0, 0%, 100%);
-  --foreground: hsl(20, 14.3%, 4.1%);
-  --muted: hsl(60, 4.8%, 95.9%);
-  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --foreground: hsl(0, 0%, 9%);
+  --muted: hsl(0, 0%, 96%);
+  --muted-foreground: hsl(0, 0%, 45%);
   --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --popover-foreground: hsl(0, 0%, 9%);
   --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(20, 14.3%, 4.1%);
-  --border: hsl(20, 5.9%, 90%);
-  --input: hsl(20, 5.9%, 90%);
-  --primary: hsl(207, 90%, 54%);
-  --primary-foreground: hsl(211, 100%, 99%);
-  --secondary: hsl(60, 4.8%, 95.9%);
-  --secondary-foreground: hsl(24, 9.8%, 10%);
-  --accent: hsl(60, 4.8%, 95.9%);
-  --accent-foreground: hsl(24, 9.8%, 10%);
+  --card-foreground: hsl(0, 0%, 9%);
+  --border: hsl(0, 0%, 89%);
+  --input: hsl(0, 0%, 89%);
+  --primary: hsl(0, 0%, 9%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(0, 0%, 96%);
+  --secondary-foreground: hsl(0, 0%, 9%);
+  --accent: hsl(0, 0%, 96%);
+  --accent-foreground: hsl(0, 0%, 9%);
   --destructive: hsl(0, 84.2%, 60.2%);
-  --destructive-foreground: hsl(60, 9.1%, 97.8%);
-  --ring: hsl(20, 14.3%, 4.1%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(0, 0%, 9%);
   --radius: 0.5rem;
   
-  /* Custom colors for nail salon */
-  --blush: hsl(338, 50%, 96%);
-  --dusty-rose: hsl(338, 50%, 70%);
-  --warm-gold: hsl(37, 44%, 63%);
-  --cream: hsl(50, 29%, 99%);
+  /* Custom colors for nail salon - elegant minimal palette */
+  --light-gray: hsl(0, 0%, 97%);
+  --medium-gray: hsl(0, 0%, 64%);
+  --dark-gray: hsl(0, 0%, 31%);
+  --elegant-gold: hsl(45, 100%, 51%);
+  --soft-white: hsl(0, 0%, 99%);
 }
 
 .dark {
@@ -61,50 +62,66 @@
 
   body {
     @apply font-sans antialiased;
-    background-color: hsl(var(--cream));
-    color: hsl(20, 14.3%, 4.1%);
+    background-color: hsl(var(--soft-white));
+    color: hsl(0, 0%, 9%);
   }
 }
 
 @layer utilities {
-  .bg-blush {
-    background-color: hsl(var(--blush));
+  .bg-light-gray {
+    background-color: hsl(var(--light-gray));
   }
   
-  .bg-dusty-rose {
-    background-color: hsl(var(--dusty-rose));
+  .bg-medium-gray {
+    background-color: hsl(var(--medium-gray));
   }
   
-  .bg-warm-gold {
-    background-color: hsl(var(--warm-gold));
+  .bg-dark-gray {
+    background-color: hsl(var(--dark-gray));
   }
   
-  .bg-cream {
-    background-color: hsl(var(--cream));
+  .bg-elegant-gold {
+    background-color: hsl(var(--elegant-gold));
   }
   
-  .text-dusty-rose {
-    color: hsl(var(--dusty-rose));
+  .bg-soft-white {
+    background-color: hsl(var(--soft-white));
   }
   
-  .text-warm-gold {
-    color: hsl(var(--warm-gold));
+  .text-medium-gray {
+    color: hsl(var(--medium-gray));
   }
   
-  .border-dusty-rose {
-    border-color: hsl(var(--dusty-rose));
+  .text-dark-gray {
+    color: hsl(var(--dark-gray));
   }
   
-  .hover\:bg-dusty-rose:hover {
-    background-color: hsl(var(--dusty-rose));
+  .text-elegant-gold {
+    color: hsl(var(--elegant-gold));
   }
   
-  .from-dusty-rose {
-    --tw-gradient-from: hsl(var(--dusty-rose));
+  .border-elegant-gold {
+    border-color: hsl(var(--elegant-gold));
   }
   
-  .to-warm-gold {
-    --tw-gradient-to: hsl(var(--warm-gold));
+  .border-medium-gray {
+    border-color: hsl(var(--medium-gray));
+  }
+  
+  .hover\:bg-elegant-gold:hover {
+    background-color: hsl(var(--elegant-gold));
+  }
+  
+  .hover\:bg-black:hover {
+    background-color: hsl(0, 0%, 0%);
+  }
+  
+  .from-elegant-gold {
+    --tw-gradient-from: hsl(var(--elegant-gold));
+  }
+  
+  .to-black {
+    --tw-gradient-to: hsl(0, 0%, 0%);
   }
   
   .font-playfair {
@@ -145,7 +162,7 @@
 .floating-label textarea:focus + label,
 .floating-label textarea:not(:placeholder-shown) + label {
   transform: translateY(-1.5rem) scale(0.85);
-  color: hsl(var(--dusty-rose));
+  color: hsl(var(--elegant-gold));
 }
 
 .floating-label label {
@@ -158,14 +175,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(var(--blush));
+  background: hsl(var(--light-gray));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--dusty-rose));
+  background: hsl(var(--medium-gray));
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(338, 50%, 60%);
+  background: hsl(var(--dark-gray));
 }
