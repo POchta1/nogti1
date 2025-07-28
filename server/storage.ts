@@ -127,6 +127,34 @@ export class MemStorage implements IStorage {
         category: "nail-art",
         imageUrl: "/attached_assets/mis_beauty_coworking_1753734078477_1753734147301.jpeg",
         description: "Неповторимый авторский дизайн"
+      },
+      {
+        id: randomUUID(),
+        title: "Стильный маникюр",
+        category: "design",
+        imageUrl: "/attached_assets/1753734584279_1753734835271.jpeg",
+        description: "Стильное решение для повседневности"
+      },
+      {
+        id: randomUUID(),
+        title: "Креативный подход",
+        category: "nail-art",
+        imageUrl: "/attached_assets/1753734598039_1753734835271.jpeg",
+        description: "Креативное исполнение дизайна"
+      },
+      {
+        id: randomUUID(),
+        title: "Изящное покрытие",
+        category: "classic",
+        imageUrl: "/attached_assets/1753734612207_1753734835271.jpeg",
+        description: "Изящное классическое покрытие"
+      },
+      {
+        id: randomUUID(),
+        title: "Индивидуальный дизайн",
+        category: "nail-art",
+        imageUrl: "/attached_assets/1753734635752_1753734835271.jpeg",
+        description: "Индивидуальный подход к каждому клиенту"
       }
     ];
 
