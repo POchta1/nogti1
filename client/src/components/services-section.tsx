@@ -27,7 +27,7 @@ export default function ServicesSection() {
 
   // Create multiple copies for truly infinite scroll
   const infiniteServices = services.length > 0 ? 
-    [...services, ...services, ...services, ...services, ...services] : [];
+    [...services, ...services, ...services] : [];
 
   if (isLoading) {
     return (
@@ -84,36 +84,36 @@ export default function ServicesSection() {
               return (
                 <div
                   key={`${service.id}-${index}`}
-                  className="flex-none mx-4 w-80"
-                  style={{ minWidth: '320px', maxWidth: '320px' }}
+                  className="flex-none mx-2 w-52"
+                  style={{ minWidth: '208px', maxWidth: '208px' }}
                 >
-                  <div className="group relative bg-white border border-gray-100 rounded-3xl p-6 md:p-8 hover:shadow-2xl hover:border-gray-200 transition-all duration-500 h-96 flex flex-col">
+                  <div className="group relative bg-white border border-gray-100 rounded-3xl p-4 hover:shadow-2xl hover:border-gray-200 transition-all duration-500 h-72 flex flex-col">
                     {/* Icon */}
-                    <div className="relative mb-6">
-                      <div className="w-16 h-16 bg-gradient-to-br from-gray-900 to-gray-700 rounded-2xl flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-300">
-                        <IconComponent className="text-white" size={28} />
+                    <div className="relative mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-gray-900 to-gray-700 rounded-xl flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-300">
+                        <IconComponent className="text-white" size={20} />
                       </div>
-                      <div className="absolute -top-2 -right-2 w-6 h-6 bg-elegant-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute -top-1 -right-1 w-4 h-4 bg-elegant-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
 
                     {/* Content */}
                     <div className="flex flex-col h-full">
-                      <h3 className="text-xl font-bold text-black mb-3 group-hover:text-gray-700 transition-colors">
+                      <h3 className="text-lg font-bold text-black mb-2 group-hover:text-gray-700 transition-colors">
                         {service.name}
                       </h3>
-                      <p className="text-sm text-gray-600 mb-4 leading-relaxed flex-grow">
+                      <p className="text-xs text-gray-600 mb-3 leading-relaxed flex-grow">
                         {service.description}
                       </p>
                       
                       {/* Price and Duration */}
-                      <div className="mb-4">
+                      <div className="mb-3">
                         <div className="flex items-center justify-between">
-                          <span className="text-2xl font-bold text-black">
+                          <span className="text-lg font-bold text-black">
                             {service.price}
                           </span>
-                          <div className="flex items-center space-x-2 text-gray-500">
-                            <Clock size={16} />
-                            <span className="text-sm">{service.duration}</span>
+                          <div className="flex items-center space-x-1 text-gray-500">
+                            <Clock size={12} />
+                            <span className="text-xs">{service.duration}</span>
                           </div>
                         </div>
                       </div>
@@ -124,10 +124,10 @@ export default function ServicesSection() {
                           const element = document.getElementById("contact");
                           if (element) element.scrollIntoView({ behavior: "smooth" });
                         }}
-                        className="w-full bg-black text-white py-3 px-6 text-sm rounded-full hover:bg-gray-800 transition-colors flex items-center justify-center space-x-2 group/button mt-auto"
+                        className="w-full bg-black text-white py-2 px-4 text-xs rounded-full hover:bg-gray-800 transition-colors flex items-center justify-center space-x-1 group/button mt-auto"
                       >
                         <span>Записаться</span>
-                        <ArrowRight size={16} className="group-hover/button:translate-x-1 transition-transform" />
+                        <ArrowRight size={12} className="group-hover/button:translate-x-1 transition-transform" />
                       </button>
                     </div>
                   </div>
