@@ -88,59 +88,45 @@ export class MemStorage implements IStorage {
     const galleryItems = [
       {
         id: randomUUID(),
-        title: "Цветочный дизайн",
+        title: "Элегантный дизайн",
         category: "nail-art",
-        imageUrl: "https://images.unsplash.com/photo-1604654894610-df63bc536371?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800",
-        description: "Изысканный nail art с цветочными мотивами"
+        imageUrl: "/attached_assets/1753734091510_1753734147300.jpeg",
+        description: "Изысканный nail art с декоративными элементами"
       },
       {
         id: randomUUID(),
-        title: "Золотой френч",
-        category: "french",
-        imageUrl: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=900",
-        description: "Элегантный французский маникюр с золотыми акцентами"
-      },
-      {
-        id: randomUUID(),
-        title: "Геометрия",
-        category: "design",
-        imageUrl: "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=750",
-        description: "Геометрический дизайн ногтей в пастельных тонах"
-      },
-      {
-        id: randomUUID(),
-        title: "Нюдовый блеск",
+        title: "Классический стиль",
         category: "classic",
-        imageUrl: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800",
-        description: "Классический нюдовый маникюр с деликатным блеском"
+        imageUrl: "/attached_assets/1753734106090_1753734147301.jpeg",
+        description: "Элегантный классический маникюр"
       },
       {
         id: randomUUID(),
-        title: "Мраморный эффект",
-        category: "nail-art",
-        imageUrl: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=750",
-        description: "Художественный мраморный эффект в розовых и белых тонах"
-      },
-      {
-        id: randomUUID(),
-        title: "Блестящий градиент",
+        title: "Современный дизайн",
         category: "design",
-        imageUrl: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800",
-        description: "Деликатный градиент с блестками и розовым золотом"
+        imageUrl: "/attached_assets/1753734116789_1753734147301.jpeg",
+        description: "Современный авторский дизайн"
       },
       {
         id: randomUUID(),
-        title: "Омбре",
-        category: "design",
-        imageUrl: "https://images.unsplash.com/photo-1610992015732-2449b76344bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=900",
-        description: "Изысканный омбре эффект от розового к нюдовому"
-      },
-      {
-        id: randomUUID(),
-        title: "Минимализм",
+        title: "Художественная роспись",
         category: "nail-art",
-        imageUrl: "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=750",
-        description: "Современный минималистичный nail art с тонкими золотыми линиями"
+        imageUrl: "/attached_assets/1753734133614_1753734147301.jpeg",
+        description: "Уникальная художественная роспись"
+      },
+      {
+        id: randomUUID(),
+        title: "Профессиональная работа",
+        category: "design",
+        imageUrl: "/attached_assets/mis_beauty_coworking_1753734047518_1753734147301.jpeg",
+        description: "Качественное профессиональное исполнение"
+      },
+      {
+        id: randomUUID(),
+        title: "Авторский стиль",
+        category: "nail-art",
+        imageUrl: "/attached_assets/mis_beauty_coworking_1753734078477_1753734147301.jpeg",
+        description: "Неповторимый авторский дизайн"
       }
     ];
 
