@@ -113,15 +113,7 @@ export default function GallerySection() {
                   </div>
                 </div>
 
-                {/* Bottom info bar */}
-                <div className="p-4 bg-white">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-gray-900">{item.title}</span>
-                    <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
-                      {categories.find((cat) => cat.id === item.category)?.name}
-                    </span>
-                  </div>
-                </div>
+
               </div>
             </div>
           ))}
