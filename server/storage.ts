@@ -155,6 +155,20 @@ export class MemStorage implements IStorage {
         category: "nail-art",
         imageUrl: "/attached_assets/1753734635752_1753734835271.jpeg",
         description: "Индивидуальный подход к каждому клиенту"
+      },
+      {
+        id: randomUUID(),
+        title: "Креативный дизайн",
+        category: "nail-art",
+        imageUrl: "/attached_assets/1753738817915_1753739748578.jpeg",
+        description: "Оригинальный nail art с яркими акцентами"
+      },
+      {
+        id: randomUUID(),
+        title: "Стильный маникюр",
+        category: "classic",
+        imageUrl: "/attached_assets/1753739718804_1753739748579.jpeg",
+        description: "Элегантный маникюр с современным дизайном"
       }
     ];
 
