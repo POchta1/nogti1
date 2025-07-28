@@ -78,7 +78,7 @@ export default function GallerySection() {
                 const element = document.getElementById("contact");
                 if (element) element.scrollIntoView({ behavior: "smooth" });
               }}
-              className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors font-medium"
+              className="bg-black text-white px-8 py-3 rounded-full hover:bg-gradient-to-r hover:from-yellow-600 hover:to-yellow-700 hover:shadow-lg hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-300 font-medium"
             >
               Записаться сейчас
             </button>

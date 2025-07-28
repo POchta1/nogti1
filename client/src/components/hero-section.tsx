@@ -35,13 +35,13 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={() => scrollToSection("contact")}
-                className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all font-medium text-lg"
+                className="bg-black text-white px-8 py-4 rounded-full hover:bg-gradient-to-r hover:from-yellow-600 hover:to-yellow-700 hover:shadow-lg hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-300 font-medium text-lg"
               >
                 Записаться онлайн
               </button>
               <button
                 onClick={() => scrollToSection("gallery")}
-                className="flex items-center justify-center space-x-2 border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full hover:border-black hover:text-black transition-all font-medium text-lg"
+                className="flex items-center justify-center space-x-2 border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full hover:border-yellow-500 hover:text-yellow-600 hover:bg-yellow-50 hover:scale-105 transition-all duration-300 font-medium text-lg"
               >
                 <Play size={20} />
                 <span>Смотреть работы</span>
@@ -89,8 +89,8 @@ export default function HeroSection() {
             </div>
             
             {/* Decorative Elements */}
-            <div className="absolute -top-4 -left-4 w-24 h-24 bg-elegant-gold/20 rounded-full"></div>
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gray-200/50 rounded-full"></div>
+            <div className="absolute -top-4 -left-4 w-24 h-24 bg-elegant-gold/30 rounded-full animate-pulse"></div>
+            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-r from-yellow-200/50 to-yellow-300/50 rounded-full"></div>
           </div>
         </div>
       </div>
@@ -99,7 +99,7 @@ export default function HeroSection() {
       <div className="text-center pb-12">
         <button
           onClick={() => scrollToSection("gallery")}
-          className="inline-flex items-center space-x-2 text-gray-500 hover:text-black transition-colors"
+          className="inline-flex items-center space-x-2 text-gray-500 hover:text-yellow-600 hover:scale-105 transition-all duration-300"
         >
           <span className="text-sm font-medium">Смотреть портфолио</span>
           <ArrowDown size={16} className="animate-bounce" />
