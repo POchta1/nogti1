@@ -37,7 +37,7 @@ export default function ServicesSection() {
           </div>
           <div className="grid grid-cols-3 gap-8">
             {[...Array(6)].map((_, i) => (
-              <div key={i} className="animate-pulse bg-gray-100 aspect-square p-8">
+              <div key={i} className="animate-pulse bg-gray-100 border-2 border-elegant-gold aspect-square p-8">
                 <div className="w-16 h-16 bg-gray-200 rounded-2xl mb-6" />
                 <div className="h-6 bg-gray-200 rounded mb-4" />
                 <div className="h-4 bg-gray-200 rounded mb-2" />
@@ -81,33 +81,33 @@ export default function ServicesSection() {
                   key={service.id}
                   className="aspect-square"
                 >
-                  <div className="group relative bg-white border border-gray-100 p-8 hover:shadow-2xl hover:border-gray-200 transition-all duration-500 h-full flex flex-col">
+                  <div className="group relative bg-white border-2 border-elegant-gold p-8 hover:shadow-2xl hover:border-yellow-500 transition-all duration-500 h-full flex flex-col">
                     {/* Icon */}
                     <div className="relative mb-6">
-                      <div className="w-16 h-16 bg-gradient-to-br from-gray-900 to-gray-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-300">
-                        <IconComponent className="text-white" size={28} />
+                      <div className="w-20 h-20 bg-gradient-to-br from-gray-900 to-gray-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-300">
+                        <IconComponent className="text-white" size={32} />
                       </div>
-                      <div className="absolute -top-2 -right-2 w-6 h-6 bg-elegant-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-elegant-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
 
                     {/* Content */}
                     <div className="flex flex-col h-full">
-                      <h3 className="text-xl font-bold text-black mb-4 group-hover:text-gray-700 transition-colors">
+                      <h3 className="text-2xl font-bold text-black mb-4 group-hover:text-gray-700 transition-colors">
                         {service.name}
                       </h3>
-                      <p className="text-sm text-gray-600 mb-6 leading-relaxed flex-grow">
+                      <p className="text-base text-gray-600 mb-6 leading-relaxed flex-grow">
                         {service.description}
                       </p>
                       
                       {/* Price and Duration */}
                       <div className="mb-6">
                         <div className="flex items-center justify-between">
-                          <span className="text-2xl font-bold text-black">
+                          <span className="text-3xl font-bold text-black">
                             {service.price}
                           </span>
                           <div className="flex items-center space-x-2 text-gray-500">
-                            <Clock size={16} />
-                            <span className="text-sm">{service.duration}</span>
+                            <Clock size={18} />
+                            <span className="text-base">{service.duration}</span>
                           </div>
                         </div>
                       </div>
@@ -118,10 +118,10 @@ export default function ServicesSection() {
                           const element = document.getElementById("contact");
                           if (element) element.scrollIntoView({ behavior: "smooth" });
                         }}
-                        className="w-full bg-black text-white py-3 px-6 text-sm hover:bg-gray-800 transition-colors flex items-center justify-center space-x-2 group/button mt-auto"
+                        className="w-full bg-black text-white py-4 px-6 text-base hover:bg-gray-800 transition-colors flex items-center justify-center space-x-2 group/button mt-auto"
                       >
                         <span>Записаться</span>
-                        <ArrowRight size={16} className="group-hover/button:translate-x-1 transition-transform" />
+                        <ArrowRight size={18} className="group-hover/button:translate-x-1 transition-transform" />
                       </button>
                     </div>
                   </div>
