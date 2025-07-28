@@ -22,7 +22,8 @@ export default function Navigation() {
               <Sparkles className="text-white" size={20} />
             </div>
             <div>
-              <div className="font-bold text-xl text-black">Solo Miia</div>
+              <div className="font-bold text-xl text-black">solo.miia
+</div>
               <div className="text-xs text-gray-500 uppercase tracking-wide">Nail Studio</div>
             </div>
           </div>
@@ -74,7 +75,6 @@ export default function Navigation() {
           </button>
         </div>
       </div>
-
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-white border-t">
