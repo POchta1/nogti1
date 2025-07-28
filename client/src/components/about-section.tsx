@@ -75,7 +75,7 @@ export default function AboutSection() {
             <div className="relative">
               <div className="w-full h-[600px] rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="/attached_assets/sfds_1753740813314.jpg"
+                  src="/attached_assets/sfds (1) (1)_1753740944046.jpg"
                   alt="Портрет мастера маникюра - девушка в желтом платье"
                   className="w-full h-full object-cover object-center"
                 />
