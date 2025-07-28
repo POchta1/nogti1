@@ -35,7 +35,7 @@ export class MemStorage implements IStorage {
       {
         id: randomUUID(),
         name: "Классический маникюр",
-        description: "Профессиональная обработка ногтей и кутикулы с покрытием гель-лаком. Идеальная форма и длительный результат.",
+        description: "Профессиональная обработка ногтей и кутикулы с покрытием гель-лаком.",
         price: "от 2500₽",
         duration: "1.5 часа",
         icon: "hand-sparkles"
@@ -178,7 +178,11 @@ export class MemStorage implements IStorage {
 
   async createGalleryItem(insertItem: InsertGalleryItem): Promise<GalleryItem> {
     const id = randomUUID();
-    const item: GalleryItem = { ...insertItem, id };
+    const item: GalleryItem = { 
+      ...insertItem, 
+      id,
+      description: insertItem.description || null
+    };
     this.galleryItems.set(id, item);
     return item;
   }
@@ -192,6 +196,7 @@ export class MemStorage implements IStorage {
     const booking: Booking = { 
       ...insertBooking, 
       id,
+      message: insertBooking.message || null,
       createdAt: new Date()
     };
     this.bookings.set(id, booking);

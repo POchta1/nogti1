@@ -29,28 +29,29 @@ export default function ServicesSection() {
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
     loop: true,
-    align: 'center',
-    dragFree: true,
-    containScroll: 'trimSnaps'
+    align: 'start',
+    dragFree: false,
+    containScroll: 'trimSnaps',
+    slidesToScroll: 1
   });
 
-  // Auto-scroll functionality for infinite slow movement
-  const autoScroll = useCallback(() => {
+  // Auto-scroll functionality for infinite smooth movement
+  useEffect(() => {
     if (!emblaApi) return;
+    
+    let intervalId: NodeJS.Timeout;
     
     const scrollNext = () => {
       emblaApi.scrollNext();
     };
 
-    const interval = setInterval(scrollNext, 3000); // Move every 3 seconds
-    return () => clearInterval(interval);
-  }, [emblaApi]);
+    // Start auto-scroll immediately
+    intervalId = setInterval(scrollNext, 2500); // Every 2.5 seconds for smooth movement
 
-  useEffect(() => {
-    if (!emblaApi) return;
-    const cleanup = autoScroll();
-    return cleanup;
-  }, [emblaApi, autoScroll]);
+    return () => {
+      if (intervalId) clearInterval(intervalId);
+    };
+  }, [emblaApi]);
 
   // Duplicate services for infinite scroll effect
   const infiniteServices = services.length > 0 ? [...services, ...services, ...services] : [];
@@ -103,14 +104,14 @@ export default function ServicesSection() {
 
         {/* Services Carousel */}
         <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex">
+          <div className="flex transition-transform ease-linear">
             {infiniteServices.map((service, index) => {
               const IconComponent = iconMap[service.icon as keyof typeof iconMap] || Sparkles;
               
               return (
                 <div
                   key={`${service.id}-${index}`}
-                  className="flex-none mx-4 w-80 transition-all duration-700"
+                  className="flex-none mx-4 w-80 transition-all duration-500 ease-in-out"
                   style={{ minWidth: '320px', maxWidth: '320px' }}
                 >
                   <div className="group relative bg-white border border-gray-100 rounded-3xl p-6 md:p-8 hover:shadow-2xl hover:border-gray-200 transition-all duration-500 h-96 flex flex-col">
