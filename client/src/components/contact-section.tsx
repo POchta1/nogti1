@@ -164,7 +164,7 @@ export default function ContactSection() {
                       <FormControl>
                         <Input
                           placeholder="Введите ваше имя"
-                          className="rounded-2xl border-2 focus:border-dusty-rose"
+                          className="rounded-2xl border-2 focus:border-yellow-500 hover:border-yellow-400 focus:ring-2 focus:ring-yellow-500/20 transition-all duration-300"
                           {...field}
                         />
                       </FormControl>
@@ -182,7 +182,7 @@ export default function ContactSection() {
                       <FormControl>
                         <Input
                           placeholder="+7 (___) ___-__-__"
-                          className="rounded-2xl border-2 focus:border-dusty-rose"
+                          className="rounded-2xl border-2 focus:border-yellow-500 hover:border-yellow-400 focus:ring-2 focus:ring-yellow-500/20 transition-all duration-300"
                           {...field}
                         />
                       </FormControl>
@@ -199,7 +199,7 @@ export default function ContactSection() {
                       <FormLabel>Услуга</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
-                          <SelectTrigger className="rounded-2xl border-2 focus:border-dusty-rose">
+                          <SelectTrigger className="rounded-2xl border-2 focus:border-yellow-500 hover:border-yellow-400 focus:ring-2 focus:ring-yellow-500/20 transition-all duration-300">
                             <SelectValue placeholder="Выберите услугу" />
                           </SelectTrigger>
                         </FormControl>
@@ -226,7 +226,7 @@ export default function ContactSection() {
                       <FormControl>
                         <Input
                           type="date"
-                          className="rounded-2xl border-2 focus:border-dusty-rose"
+                          className="rounded-2xl border-2 focus:border-yellow-500 hover:border-yellow-400 focus:ring-2 focus:ring-yellow-500/20 transition-all duration-300"
                           {...field}
                         />
                       </FormControl>
@@ -244,9 +244,10 @@ export default function ContactSection() {
                       <FormControl>
                         <Textarea
                           placeholder="Расскажите о ваших пожеланиях к дизайну..."
-                          className="rounded-2xl border-2 focus:border-dusty-rose resize-none"
+                          className="rounded-2xl border-2 focus:border-yellow-500 hover:border-yellow-400 focus:ring-2 focus:ring-yellow-500/20 resize-none transition-all duration-300"
                           rows={4}
                           {...field}
+                          value={field.value || ""}
                         />
                       </FormControl>
                       <FormMessage />
@@ -257,7 +258,7 @@ export default function ContactSection() {
                 <Button
                   type="submit"
                   disabled={bookingMutation.isPending}
-                  className="w-full bg-gradient-to-r from-dusty-rose to-warm-gold text-white py-3 rounded-2xl font-medium hover:from-dusty-rose/90 hover:to-warm-gold/90 transition-all transform hover:scale-105 shadow-lg"
+                  className="w-full bg-black text-white py-3 rounded-2xl font-medium hover:bg-gradient-to-r hover:from-yellow-600 hover:to-yellow-700 hover:shadow-lg hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-300"
                 >
                   {bookingMutation.isPending ? "Отправляем..." : "Отправить заявку"}
                 </Button>

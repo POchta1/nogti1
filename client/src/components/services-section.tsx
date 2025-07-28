@@ -82,18 +82,18 @@ export default function ServicesSection() {
                   className="w-full"
                   style={{ aspectRatio: '1/1' }}
                 >
-                  <div className="group relative bg-white border-2 border-elegant-gold p-6 hover:shadow-2xl hover:border-yellow-500 transition-all duration-500 w-full h-full flex flex-col justify-between">
+                  <div className="group relative bg-white border-2 border-elegant-gold p-6 hover:shadow-2xl hover:shadow-yellow-500/20 hover:border-yellow-500 hover:bg-gradient-to-br hover:from-white hover:to-yellow-50 transition-all duration-500 w-full h-full flex flex-col justify-between">
                     {/* Icon */}
                     <div className="relative mb-4">
-                      <div className="w-16 h-16 bg-gradient-to-br from-gray-900 to-gray-700 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <IconComponent className="text-white" size={28} />
+                      <div className="w-16 h-16 bg-gradient-to-br from-gray-900 to-gray-700 flex items-center justify-center group-hover:scale-110 group-hover:from-yellow-600 group-hover:to-yellow-700 transition-all duration-300">
+                        <IconComponent className="text-white group-hover:text-yellow-100" size={28} />
                       </div>
-                      <div className="absolute -top-1 -right-1 w-6 h-6 bg-elegant-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute -top-1 -right-1 w-6 h-6 bg-elegant-gold rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-300"></div>
                     </div>
 
                     {/* Content */}
                     <div className="flex flex-col flex-grow">
-                      <h3 className="text-lg font-bold text-black mb-3 group-hover:text-gray-700 transition-colors line-clamp-2">
+                      <h3 className="text-lg font-bold text-black mb-3 group-hover:text-yellow-800 transition-colors line-clamp-2">
                         {service.name}
                       </h3>
                       <p className="text-sm text-gray-600 mb-4 leading-relaxed flex-grow line-clamp-3">
@@ -104,7 +104,7 @@ export default function ServicesSection() {
                       {/* Price and Duration */}
                       <div className="mb-4">
                         <div className="flex items-center justify-between">
-                          <span className="text-xl font-bold text-black">
+                          <span className="text-xl font-bold text-black group-hover:text-yellow-700 transition-colors">
                             {service.price}
                           </span>
                           <div className="flex items-center space-x-1 text-gray-500">
@@ -120,7 +120,7 @@ export default function ServicesSection() {
                           const element = document.getElementById("contact");
                           if (element) element.scrollIntoView({ behavior: "smooth" });
                         }}
-                        className="w-full bg-black text-white py-3 px-4 text-sm hover:bg-gray-800 transition-colors flex items-center justify-center space-x-2 group/button"
+                        className="w-full bg-black text-white py-3 px-4 text-sm hover:bg-gradient-to-r hover:from-yellow-600 hover:to-yellow-700 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 flex items-center justify-center space-x-2 group/button"
                       >
                         <span>Записаться</span>
                         <ArrowRight size={16} className="group-hover/button:translate-x-1 transition-transform" />

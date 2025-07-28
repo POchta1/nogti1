@@ -36,14 +36,14 @@ export default function AboutSection() {
             </div>
 
             <div className="mt-8 grid grid-cols-2 gap-6">
-              <div className="text-center p-4 bg-gray-100 rounded-2xl">
-                <div className="text-3xl font-bold text-elegant-gold font-playfair">
+              <div className="text-center p-4 bg-gray-100 rounded-2xl hover:bg-gradient-to-br hover:from-yellow-50 hover:to-yellow-100 hover:shadow-lg hover:shadow-yellow-500/20 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl font-bold text-elegant-gold font-playfair group-hover:animate-pulse">
                   500+
                 </div>
                 <div className="text-gray-600">Довольных клиентов</div>
               </div>
-              <div className="text-center p-4 bg-gray-100 rounded-2xl">
-                <div className="text-3xl font-bold text-elegant-gold font-playfair">
+              <div className="text-center p-4 bg-gray-100 rounded-2xl hover:bg-gradient-to-br hover:from-yellow-50 hover:to-yellow-100 hover:shadow-lg hover:shadow-yellow-500/20 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl font-bold text-elegant-gold font-playfair group-hover:animate-pulse">
                   5
                 </div>
                 <div className="text-gray-600">Лет опыта</div>
@@ -82,8 +82,8 @@ export default function AboutSection() {
               </div>
 
               {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-dusty-rose to-warm-gold rounded-full opacity-20" />
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-warm-gold to-dusty-rose rounded-full opacity-20" />
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-full opacity-30 animate-pulse" />
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full opacity-30" />
             </div>
           </div>
         </div>
