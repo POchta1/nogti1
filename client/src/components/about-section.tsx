@@ -77,8 +77,8 @@ export default function AboutSection() {
                 <img
                   src="/attached_assets/mis_beauty_coworking_1753740224874_1753740253451.jpeg"
                   alt="Портрет мастера маникюра - девушка в желтом платье"
-                  className="w-full h-full object-cover object-center"
-                  style={{ objectPosition: 'center center' }}
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: '30% 20%', transform: 'scale(1.2)' }}
                 />
               </div>
 
