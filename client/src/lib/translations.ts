@@ -55,6 +55,8 @@ export const translations = {
     gelCoatingDesc: 'Langanhaltende Gel-Lack-Beschichtung in jedem Farbton. Perfekter Glanz bis zu 3 Wochen.',
     coatingRemoval: 'Beschichtung entfernen',
     coatingRemovalDesc: 'Professionelles und schonenderes Entfernen der alten Beschichtung von den Nägeln.',
+    reinforcement: 'Verstärkung',
+    reinforcementDesc: 'Verstärkung der natürlichen Nägel mit speziellen Formulierungen für Gesundheit und Festigkeit.',
     
     // Gallery Section
     gallerySubtitle: 'Portfolio',
@@ -168,6 +170,8 @@ export const translations = {
     gelCoatingDesc: 'Long-lasting gel polish coating in any shade. Perfect shine for up to 3 weeks.',
     coatingRemoval: 'Coating Removal',
     coatingRemovalDesc: 'Professional and gentle removal of old coating from nails.',
+    reinforcement: 'Reinforcement',
+    reinforcementDesc: 'Strengthening natural nails with special formulations for health and durability.',
     
     // Gallery Section
     gallerySubtitle: 'Portfolio',
@@ -281,6 +285,8 @@ export const translations = {
     gelCoatingDesc: 'Стійке покриття гель-лаком будь-якого відтінку. Бездоганний блиск до 3 тижнів.',
     coatingRemoval: 'Зняття покриття',
     coatingRemovalDesc: 'Професійне та бережне зняття старого покриття з нігтів.',
+    reinforcement: 'Зміцнення',
+    reinforcementDesc: 'Зміцнення натуральних нігтів спеціальними складами для здоров\'я та міцності.',
     
     // Gallery Section
     gallerySubtitle: 'Портфоліо',

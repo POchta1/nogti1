@@ -103,7 +103,8 @@ The current setup includes in-memory storage as a fallback, making it easy to de
 - Successfully migrated project from Replit Agent to Replit environment
 - Verified proper client/server separation and security practices
 - Added new service: "Снятие покрытия" (coating removal) for 10€, 30 minutes duration
+- Added new service: "Укрепление" (reinforcement) for 5€, 20 minutes duration
 - Updated nail extension service: price range 60€-70€ with sizes S (60€), M (65€), L (70€)
-- Updated layout to display all 6 services in 3+3 grid format
+- Updated layout to display all 7 services in 3+4 grid format
 - Updated translations for all three languages (German, English, Ukrainian)
 - All systems tested and working correctly with multi-language support

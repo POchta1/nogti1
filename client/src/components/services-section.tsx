@@ -7,7 +7,8 @@ import {
   Waves,
   Clock,
   ArrowRight,
-  Eraser
+  Eraser,
+  Shield
 } from "lucide-react";
 import { openWhatsAppBooking, openWhatsAppConsultation } from "@/lib/whatsapp-utils";
 import { useTranslation } from "@/hooks/use-translation";
@@ -20,6 +21,7 @@ const iconMap = {
   "heart": Heart,
   "sparkles": Sparkles,
   "eraser": Eraser,
+  "shield": Shield,
 };
 
 interface ServiceData {
@@ -79,6 +81,14 @@ const servicesData: ServiceData[] = [
     price: '10€',
     duration: '0.5',
     icon: 'eraser'
+  },
+  {
+    id: 'reinforcement',
+    nameKey: 'reinforcement',
+    descKey: 'reinforcementDesc',
+    price: '5€',
+    duration: '0.3',
+    icon: 'shield'
   }
 ];
 
@@ -152,9 +162,9 @@ export default function ServicesSection() {
             })}
           </div>
           
-          {/* Second row - 3 cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {servicesData.slice(3, 6).map((service) => {
+          {/* Second row - 4 cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {servicesData.slice(3, 7).map((service) => {
             const IconComponent = iconMap[service.icon];
             
             return (
