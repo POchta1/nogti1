@@ -192,7 +192,7 @@ export default function ServicesSection() {
                     </span>
                     <div className="flex items-center text-gray-500 text-xs sm:text-sm md:text-base">
                       <Clock className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 mr-1" />
-                      {service.duration}ч
+                      {service.duration}
                     </div>
                   </div>
 
