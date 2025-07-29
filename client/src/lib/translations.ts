@@ -98,6 +98,7 @@ export const translations = {
     quickLinks: 'Schnelle Links',
     followMe: 'Folgen Sie mir',
     allRightsReserved: 'Alle Rechte vorbehalten',
+    needWebsite: 'Brauchen Sie eine Website? Kontaktieren Sie uns +4367763945418',
     
     // Toasts
     requestSent: 'Anfrage gesendet!',
@@ -208,6 +209,7 @@ export const translations = {
     quickLinks: 'Quick links',
     followMe: 'Follow me',
     allRightsReserved: 'All rights reserved',
+    needWebsite: 'Need a website? Contact us +4367763945418',
     
     // Toasts
     requestSent: 'Request sent!',
@@ -318,6 +320,7 @@ export const translations = {
     quickLinks: 'Швидкі посилання',
     followMe: 'Стежте за мною',
     allRightsReserved: 'Усі права захищені',
+    needWebsite: 'Вам потрібен сайт? Звертайтесь +4367763945418',
     
     // Toasts
     requestSent: 'Запит відправлено!',

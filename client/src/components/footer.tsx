@@ -70,7 +70,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">{t('footerCopyright')}</p>
+          <p className="text-gray-400">{t('needWebsite')}</p>
         </div>
       </div>
     </footer>
