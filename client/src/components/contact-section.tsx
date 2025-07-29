@@ -1,10 +1,7 @@
 import { useState } from "react";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { insertBookingSchema, type InsertBooking } from "@shared/schema";
-import { apiRequest } from "@/lib/queryClient";
-import { useToast } from "@/hooks/use-toast";
+import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -13,46 +10,81 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { MapPin, Phone, Clock, Instagram } from "lucide-react";
 import { useTranslation } from "@/hooks/use-translation";
 
-export default function ContactSection() {
-  const { toast } = useToast();
-  const queryClient = useQueryClient();
-  const { t } = useTranslation();
+// Схема формы без поля preferredDate
+const contactFormSchema = z.object({
+  name: z.string().min(1, "Имя обязательно"),
+  phone: z.string().min(1, "Телефон обязателен"),
+  service: z.string().min(1, "Услуга обязательна"),
+  message: z.string().optional(),
+});
 
-  const form = useForm<InsertBooking>({
-    resolver: zodResolver(insertBookingSchema),
+type ContactFormData = z.infer<typeof contactFormSchema>;
+
+export default function ContactSection() {
+  const { t, language } = useTranslation();
+
+  const form = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
     defaultValues: {
       name: "",
       phone: "",
       service: "",
-      preferredDate: "",
       message: "",
     },
   });
 
-  const bookingMutation = useMutation({
-    mutationFn: async (booking: InsertBooking) => {
-      const response = await apiRequest("POST", "/api/bookings", booking);
-      return response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: t('requestSent'),
-        description: t('requestSentDesc'),
-      });
-      form.reset();
-      queryClient.invalidateQueries({ queryKey: ["/api/bookings"] });
-    },
-    onError: () => {
-      toast({
-        title: t('error'),
-        description: t('requestError'),
-        variant: "destructive",
-      });
-    },
-  });
+  const onSubmit = (data: ContactFormData) => {
+    // Создаем сообщение для WhatsApp на выбранном языке
+    const serviceNames = {
+      'classic': t('classicManicure'),
+      'nail-art': t('nailArt'),
+      'extension': t('extension'),
+      'spa': t('spaCare'),
+      'french': t('frenchManicure'),
+      'gel': t('gelCoating'),
+    };
 
-  const onSubmit = (data: InsertBooking) => {
-    bookingMutation.mutate(data);
+    const serviceName = serviceNames[data.service as keyof typeof serviceNames] || data.service;
+    
+    // Переводы для структуры сообщения
+    const messageTemplates = {
+      de: {
+        greeting: 'Hallo! Mein Name ist',
+        phone: 'Meine Telefonnummer:',
+        request: 'Meine Anfrage:',
+        additional: 'Zusätzliche Wünsche:'
+      },
+      en: {
+        greeting: 'Hello! My name is',
+        phone: 'My phone number:',
+        request: 'My request:',
+        additional: 'Additional wishes:'
+      },
+      uk: {
+        greeting: 'Привіт! Мене звати',
+        phone: 'Мій номер:',
+        request: 'Моє прохання:',
+        additional: 'Додаткові побажання:'
+      }
+    };
+
+    const template = messageTemplates[language] || messageTemplates.de;
+    
+    let message = `${template.greeting} ${data.name}.\n${template.phone} ${data.phone}\n${template.request} ${serviceName}`;
+    
+    if (data.message) {
+      message += `\n${template.additional} ${data.message}`;
+    }
+
+    // Отправляем в WhatsApp
+    const phoneNumber = "4366493020595";
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    window.open(whatsappUrl, '_blank');
+    
+    // Очищаем форму после отправки
+    form.reset();
   };
 
   return (
@@ -215,23 +247,7 @@ export default function ContactSection() {
                   )}
                 />
 
-                <FormField
-                  control={form.control}
-                  name="preferredDate"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>{t('preferredDate')}</FormLabel>
-                      <FormControl>
-                        <Input
-                          type="date"
-                          className="rounded-2xl border-2 focus:border-yellow-500 hover:border-yellow-400 focus:ring-2 focus:ring-yellow-500/20 transition-all duration-300"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+
 
                 <FormField
                   control={form.control}
@@ -255,10 +271,9 @@ export default function ContactSection() {
 
                 <Button
                   type="submit"
-                  disabled={bookingMutation.isPending}
                   className="w-full bg-black text-white py-3 rounded-2xl font-medium hover:bg-gradient-to-r hover:from-yellow-600 hover:to-yellow-700 hover:shadow-lg hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-300"
                 >
-                  {bookingMutation.isPending ? t('sending') : t('sendRequest')}
+                  {t('sendRequest')}
                 </Button>
               </form>
             </Form>
