@@ -87,3 +87,12 @@ The current setup includes in-memory storage as a fallback, making it easy to de
 - Updated all booking buttons to redirect to WhatsApp with pre-filled message
 - Service-specific messages include selected service name
 - Implemented openWhatsAppBooking utility function
+
+**29.07.2025** - Multi-language Support
+- Added support for German, English, and Ukrainian languages
+- Implemented LanguageContext and useTranslation hook
+- Created comprehensive translation system with 150+ translated strings
+- Added language selector component with flag icons
+- Auto-detects browser language as default
+- Saves language preference to localStorage
+- WhatsApp messages now sent in selected language

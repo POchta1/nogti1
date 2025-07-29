@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import type { Service } from "@shared/schema";
 import { openWhatsAppBooking } from "@/lib/utils";
+import { useTranslation } from "@/hooks/use-translation";
 
 const iconMap = {
   "hand-sparkles": HandHeart,
@@ -25,6 +26,7 @@ export default function ServicesSection() {
   const { data: services = [], isLoading } = useQuery<Service[]>({
     queryKey: ["/api/services"],
   });
+  const { t, language } = useTranslation();
 
   if (isLoading) {
     return (
@@ -61,14 +63,13 @@ export default function ServicesSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block bg-gray-100 px-6 py-2 rounded-full mb-6">
-            <span className="text-sm font-medium text-gray-600 uppercase tracking-wide">Услуги</span>
+            <span className="text-sm font-medium text-gray-600 uppercase tracking-wide">{t('servicesSubtitle')}</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-            Что я предлагаю
+            {t('servicesTitle')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Профессиональные услуги nail-арта с использованием премиальных материалов 
-            и индивидуальным подходом к каждому клиенту
+            {t('servicesDescription')}
           </p>
         </div>
 
@@ -117,10 +118,10 @@ export default function ServicesSection() {
 
                       {/* CTA Button */}
                       <button
-                        onClick={() => openWhatsAppBooking(service.name)}
+                        onClick={() => openWhatsAppBooking(service.name, language)}
                         className="w-full bg-black text-white py-3 px-4 text-sm hover:bg-gradient-to-r hover:from-yellow-600 hover:to-yellow-700 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 flex items-center justify-center space-x-2 group/button"
                       >
-                        <span>Записаться</span>
+                        <span>{t('bookService')}</span>
                         <ArrowRight size={16} className="group-hover/button:translate-x-1 transition-transform" />
                       </button>
                   </div>
@@ -133,17 +134,16 @@ export default function ServicesSection() {
         <div className="mt-16 text-center">
           <div className="bg-gray-50 rounded-3xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-black mb-4">
-              Не знаете, что выбрать?
+              {t('consultationTitle')}
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Запишитесь на бесплатную консультацию, и мы вместе подберем идеальный вариант 
-              для ваших ногтей с учетом всех пожеланий
+              {t('consultationDescription')}
             </p>
             <button
-              onClick={() => openWhatsAppBooking("Консультация")}
+              onClick={() => openWhatsAppBooking(t('whatsappConsultation'), language)}
               className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors font-medium"
             >
-              Получить консультацию
+              {t('getConsultation')}
             </button>
           </div>
         </div>
