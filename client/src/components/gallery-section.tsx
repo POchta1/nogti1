@@ -1,13 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import type { GalleryItem } from "@shared/schema";
 import { useTranslation } from "@/hooks/use-translation";
-import { openWhatsAppBooking } from "@/lib/utils";
+import { openWhatsAppBooking, openWhatsAppConsultation } from "@/lib/whatsapp-utils";
 
 export default function GallerySection() {
   const { data: galleryItems = [], isLoading } = useQuery<GalleryItem[]>({
     queryKey: ["/api/gallery"],
   });
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
 
   if (isLoading) {
     return (
@@ -76,7 +76,7 @@ export default function GallerySection() {
             <h3 className="text-2xl font-bold text-black mb-4">{t('galleryLiked')}</h3>
             <p className="text-gray-600 mb-6">{t('galleryLikedDesc')}</p>
             <button
-              onClick={() => openWhatsAppBooking(t('whatsappConsultation'))}
+              onClick={() => openWhatsAppConsultation(language)}
               className="bg-black text-white px-8 py-3 rounded-full hover:bg-gradient-to-r hover:from-yellow-600 hover:to-yellow-700 hover:shadow-lg hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-300 font-medium"
             >
               {t('bookNow')}
