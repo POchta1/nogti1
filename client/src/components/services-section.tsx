@@ -202,7 +202,7 @@ export default function ServicesSection() {
                     className="w-full bg-black text-white py-2 sm:py-3 md:py-4 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-medium hover:bg-yellow-500 hover:shadow-lg hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-500 flex items-center justify-center group"
                   >
                     <span className="hidden sm:inline">{t('bookService')}</span>
-                    <span className="sm:hidden">Заказать</span>
+                    <span className="sm:hidden">{t('bookServiceShort')}</span>
                     <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 ml-1 sm:ml-2 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>

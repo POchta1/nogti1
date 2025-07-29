@@ -99,12 +99,14 @@ The current setup includes in-memory storage as a fallback, making it easy to de
 - WhatsApp messages now sent in selected language
 - Fixed service cards layout to ensure equal heights
 
-**29.07.2025** - Mobile UI Optimization  
+**29.07.2025** - Mobile UI Optimization & Translation Fix
 - Improved mobile responsiveness for services section second row
 - Enhanced adaptive sizing for icons, text, and spacing across devices
 - Optimized price/duration layout for mobile screens (vertical on mobile, horizontal on desktop)
-- Shortened button text for mobile ("Заказать" instead of full text)
+- Fixed mobile button translation issue - now uses proper localized short text
+- Added bookServiceShort translation key for all languages (German: "Buchen", English: "Book", Ukrainian: "Запис")
 - Fixed TypeScript errors with Lucide icon sizing
+- Removed "ч" (hour) suffix from duration display
 
 **29.07.2025** - Project Migration & Service Updates
 - Successfully migrated project from Replit Agent to Replit environment
