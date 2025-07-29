@@ -66,6 +66,7 @@ export const translations = {
     galleryLiked: 'Gefällt es Ihnen?',
     galleryLikedDesc: 'Buchen Sie eine Beratung und wir kreieren ein einzigartiges Design für Sie',
     bookNow: 'Jetzt buchen',
+    loadMore: 'Mehr anzeigen',
     
     // Contact Section
     contactTitle: 'Kontakt',
@@ -182,6 +183,7 @@ export const translations = {
     galleryLiked: 'Like it?',
     galleryLikedDesc: 'Book a consultation and we will create a unique design for you',
     bookNow: 'Book now',
+    loadMore: 'Load More',
     
     // Contact Section
     contactTitle: 'Contact',
@@ -298,6 +300,7 @@ export const translations = {
     galleryLiked: 'Сподобалось?',
     galleryLikedDesc: 'Запишіться на консультацію і ми створимо унікальний дизайн для вас',
     bookNow: 'Записатися зараз',
+    loadMore: 'Показати більше',
     
     // Contact Section
     contactTitle: 'Контакти',

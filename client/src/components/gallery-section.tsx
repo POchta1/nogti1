@@ -2,12 +2,20 @@ import { useQuery } from "@tanstack/react-query";
 import type { GalleryItem } from "@shared/schema";
 import { useTranslation } from "@/hooks/use-translation";
 import { openWhatsAppBooking, openWhatsAppConsultation } from "@/lib/whatsapp-utils";
+import { useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function GallerySection() {
   const { data: galleryItems = [], isLoading } = useQuery<GalleryItem[]>({
     queryKey: ["/api/gallery"],
   });
   const { t, language } = useTranslation();
+  const isMobile = useIsMobile();
+  const [showAll, setShowAll] = useState(false);
+  
+  // On mobile, show only first 4 items unless "show all" is clicked
+  const displayItems = isMobile && !showAll ? galleryItems.slice(0, 4) : galleryItems;
+  const hasMoreItems = isMobile && galleryItems.length > 4;
 
   if (isLoading) {
     return (
@@ -44,7 +52,7 @@ export default function GallerySection() {
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {galleryItems.map((item, index) => (
+          {displayItems.map((item, index) => (
             <div 
               key={item.id} 
               className={`group cursor-pointer ${
@@ -68,7 +76,17 @@ export default function GallerySection() {
           ))}
         </div>
 
-
+        {/* Load More Button - Mobile Only */}
+        {hasMoreItems && !showAll && (
+          <div className="text-center mt-12">
+            <button
+              onClick={() => setShowAll(true)}
+              className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors font-medium"
+            >
+              {t('loadMore')}
+            </button>
+          </div>
+        )}
 
         {/* CTA */}
         <div className="text-center mt-16">
