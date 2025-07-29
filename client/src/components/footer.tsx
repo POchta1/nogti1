@@ -15,9 +15,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <div className="text-3xl font-bold text-dusty-rose mb-4">
-              Solo Miia
-            </div>
+            <div className="text-3xl font-bold text-dusty-rose mb-4">Solo.Miia</div>
             <p className="text-gray-400 leading-relaxed">
               {t('footerDescription')}
             </p>
