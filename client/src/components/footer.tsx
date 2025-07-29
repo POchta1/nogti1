@@ -1,4 +1,8 @@
+import { useTranslation } from "@/hooks/use-translation";
+
 export default function Footer() {
+  const { t } = useTranslation();
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -15,20 +19,19 @@ export default function Footer() {
               Solo Miia
             </div>
             <p className="text-gray-400 leading-relaxed">
-              Профессиональный nail-арт и маникюр в Москве. Создаем красоту с
-              любовью к деталям и индивидуальным подходом к каждому клиенту.
+              {t('footerDescription')}
             </p>
           </div>
 
           <div>
-            <h4 className="font-playfair text-xl font-bold mb-4">Услуги</h4>
+            <h4 className="font-playfair text-xl font-bold mb-4">{t('services')}</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <button
                   onClick={() => scrollToSection("services")}
                   className="hover:text-dusty-rose transition-colors"
                 >
-                  Классический маникюр
+                  {t('classicManicure')}
                 </button>
               </li>
               <li>
@@ -36,7 +39,7 @@ export default function Footer() {
                   onClick={() => scrollToSection("services")}
                   className="hover:text-dusty-rose transition-colors"
                 >
-                  Nail Art
+                  {t('nailArt')}
                 </button>
               </li>
               <li>
@@ -44,7 +47,7 @@ export default function Footer() {
                   onClick={() => scrollToSection("services")}
                   className="hover:text-dusty-rose transition-colors"
                 >
-                  Наращивание
+                  {t('extension')}
                 </button>
               </li>
               <li>
@@ -52,17 +55,17 @@ export default function Footer() {
                   onClick={() => scrollToSection("services")}
                   className="hover:text-dusty-rose transition-colors"
                 >
-                  SPA-уход
+                  {t('spaCare')}
                 </button>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-playfair text-xl font-bold mb-4">Контакты</h4>
+            <h4 className="font-playfair text-xl font-bold mb-4">{t('contactTitle')}</h4>
             <div className="space-y-2 text-gray-400">
-              <p>г. Москва, ул. Арбат, 12</p>
-              <p>+7 (495) 123-45-67</p>
+              <p>{t('addressText')}</p>
+              <p>+43 664 93020595</p>
               <a
                 href="https://www.instagram.com/solo.miia_nail/"
                 className="text-dusty-rose hover:underline block"
@@ -76,7 +79,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">© 2024 Solo Miia Nail. Все права защищены.</p>
+          <p className="text-gray-400">{t('footerCopyright')}</p>
         </div>
       </div>
     </footer>

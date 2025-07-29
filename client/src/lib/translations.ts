@@ -43,6 +43,9 @@ export const translations = {
     gallerySubtitle: 'Portfolio',
     galleryTitle: 'Meine Arbeiten',
     galleryDescription: 'Entdecken Sie meine neuesten Nail-Art-Kreationen und lassen Sie sich für Ihr nächstes Design inspirieren',
+    galleryLiked: 'Gefällt es Ihnen?',
+    galleryLikedDesc: 'Buchen Sie eine Beratung und wir kreieren ein einzigartiges Design für Sie',
+    bookNow: 'Jetzt buchen',
     
     // Contact Section
     contactTitle: 'Kontakt',
@@ -128,6 +131,9 @@ export const translations = {
     gallerySubtitle: 'Portfolio',
     galleryTitle: 'My work',
     galleryDescription: 'Discover my latest nail art creations and get inspired for your next design',
+    galleryLiked: 'Like it?',
+    galleryLikedDesc: 'Book a consultation and we will create a unique design for you',
+    bookNow: 'Book now',
     
     // Contact Section
     contactTitle: 'Contact',
@@ -213,6 +219,9 @@ export const translations = {
     gallerySubtitle: 'Портфоліо',
     galleryTitle: 'Мої роботи',
     galleryDescription: 'Відкрийте мої найновіші творіння nail-арту та надихніться для свого наступного дизайну',
+    galleryLiked: 'Сподобалось?',
+    galleryLikedDesc: 'Запишіться на консультацію і ми створимо унікальний дизайн для вас',
+    bookNow: 'Записатися зараз',
     
     // Contact Section
     contactTitle: 'Контакти',

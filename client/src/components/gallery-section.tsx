@@ -1,10 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 import type { GalleryItem } from "@shared/schema";
+import { useTranslation } from "@/hooks/use-translation";
 
 export default function GallerySection() {
   const { data: galleryItems = [], isLoading } = useQuery<GalleryItem[]>({
     queryKey: ["/api/gallery"],
   });
+  const { t } = useTranslation();
 
   if (isLoading) {
     return (
@@ -27,14 +29,13 @@ export default function GallerySection() {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block bg-white px-6 py-2 rounded-full shadow-sm mb-6">
-            <span className="text-sm font-medium text-gray-600 uppercase tracking-wide">Портфолио</span>
+            <span className="text-sm font-medium text-gray-600 uppercase tracking-wide">{t('gallerySubtitle')}</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-            Мои последние работы
+            {t('galleryTitle')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Каждый дизайн уникален и создается с учетом индивидуальных пожеланий клиента. 
-            Смотрите примеры моих работ в разных стилях.
+            {t('galleryDescription')}
           </p>
         </div>
 
@@ -71,8 +72,8 @@ export default function GallerySection() {
         {/* CTA */}
         <div className="text-center mt-16">
           <div className="bg-white p-8 rounded-3xl shadow-sm max-w-lg mx-auto">
-            <h3 className="text-2xl font-bold text-black mb-4">Понравилось?</h3>
-            <p className="text-gray-600 mb-6">Запишитесь на консультацию и создадим уникальный дизайн для вас</p>
+            <h3 className="text-2xl font-bold text-black mb-4">{t('galleryLiked')}</h3>
+            <p className="text-gray-600 mb-6">{t('galleryLikedDesc')}</p>
             <button
               onClick={() => {
                 const element = document.getElementById("contact");
@@ -80,7 +81,7 @@ export default function GallerySection() {
               }}
               className="bg-black text-white px-8 py-3 rounded-full hover:bg-gradient-to-r hover:from-yellow-600 hover:to-yellow-700 hover:shadow-lg hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-300 font-medium"
             >
-              Записаться сейчас
+              {t('bookNow')}
             </button>
           </div>
         </div>

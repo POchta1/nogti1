@@ -1,37 +1,32 @@
 import { Award, Tag, Star } from "lucide-react";
+import { useTranslation } from "@/hooks/use-translation";
 
 export default function AboutSection() {
+  const { t } = useTranslation();
+  
   return (
     <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="order-2 lg:order-1">
             <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              О мастере
+              {t('aboutMaster')}
             </h2>
             <h3 className="text-2xl font-playfair text-elegant-gold mb-6">
-              Мария Соло
+              {t('masterName')}
             </h3>
 
             <div className="space-y-6 text-gray-600 leading-relaxed">
               <p>
-                Привет! Меня зовут Мария, и я профессиональный nail-мастер с
-                более чем 5-летним опытом работы. Моя страсть к nail-арту
-                началась еще в университете, и с тех пор я не перестаю
-                совершенствовать свое мастерство и изучать новые техники.
+                {t('aboutText1')}
               </p>
 
               <p>
-                Каждый клиент для меня уникален, поэтому я всегда стремлюсь
-                создать дизайн, который идеально подчеркнет вашу
-                индивидуальность и стиль. Работаю только с премиальными
-                материалами и соблюдаю все стандарты безопасности и гигиены.
+                {t('aboutText2')}
               </p>
 
               <p>
-                Моя миссия - дарить вам не только красивые ногти, но и отличное
-                настроение. Приходите, и давайте вместе создадим что-то
-                прекрасное!
+                {t('aboutText3')}
               </p>
             </div>
 
@@ -40,32 +35,32 @@ export default function AboutSection() {
                 <div className="text-3xl font-bold text-elegant-gold font-playfair group-hover:animate-pulse">
                   500+
                 </div>
-                <div className="text-gray-600">Довольных клиентов</div>
+                <div className="text-gray-600">{t('happyClients')}</div>
               </div>
               <div className="text-center p-4 bg-gray-100 rounded-2xl hover:bg-gradient-to-br hover:from-yellow-50 hover:to-yellow-100 hover:shadow-lg hover:shadow-yellow-500/20 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl font-bold text-elegant-gold font-playfair group-hover:animate-pulse">
                   5
                 </div>
-                <div className="text-gray-600">Лет опыта</div>
+                <div className="text-gray-600">{t('yearsExperience')}</div>
               </div>
             </div>
 
             <div className="mt-8">
               <h4 className="font-playfair text-xl font-bold text-gray-800 mb-4">
-                Сертификаты и награды:
+                {t('certificatesTitle')}
               </h4>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-center">
                   <Tag className="text-warm-gold mr-3" size={20} />
-                  Сертифицированный мастер nail-арта
+                  {t('certifiedMaster')}
                 </li>
                 <li className="flex items-center">
                   <Award className="text-warm-gold mr-3" size={20} />
-                  Победитель конкурса "Лучший nail-дизайн 2023"
+                  {t('contestWinner')}
                 </li>
                 <li className="flex items-center">
                   <Star className="text-warm-gold mr-3" size={20} />
-                  Мастер высшей категории
+                  {t('masterCategory')}
                 </li>
               </ul>
             </div>
