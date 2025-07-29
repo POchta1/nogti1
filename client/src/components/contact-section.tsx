@@ -151,7 +151,7 @@ export default function ContactSection() {
 
             {/* Social Media */}
             <div className="mt-8">
-              <h4 className="text-xl font-bold text-gray-800 mb-4">
+              <h4 className="text-xl font-bold text-gray-800 mb-4 text-center">
                 {t('socialMedia')}
               </h4>
               <div className="flex flex-col items-center space-y-4">
