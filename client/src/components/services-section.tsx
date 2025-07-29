@@ -10,6 +10,7 @@ import {
   ArrowRight
 } from "lucide-react";
 import type { Service } from "@shared/schema";
+import { openWhatsAppBooking } from "@/lib/utils";
 
 const iconMap = {
   "hand-sparkles": HandHeart,
@@ -116,10 +117,7 @@ export default function ServicesSection() {
 
                       {/* CTA Button */}
                       <button
-                        onClick={() => {
-                          const element = document.getElementById("contact");
-                          if (element) element.scrollIntoView({ behavior: "smooth" });
-                        }}
+                        onClick={() => openWhatsAppBooking(service.name)}
                         className="w-full bg-black text-white py-3 px-4 text-sm hover:bg-gradient-to-r hover:from-yellow-600 hover:to-yellow-700 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 flex items-center justify-center space-x-2 group/button"
                       >
                         <span>Записаться</span>
@@ -142,10 +140,7 @@ export default function ServicesSection() {
               для ваших ногтей с учетом всех пожеланий
             </p>
             <button
-              onClick={() => {
-                const element = document.getElementById("contact");
-                if (element) element.scrollIntoView({ behavior: "smooth" });
-              }}
+              onClick={() => openWhatsAppBooking("Консультация")}
               className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors font-medium"
             >
               Получить консультацию

@@ -77,3 +77,13 @@ The application is configured for deployment with:
 - **Development**: Hot reloading with Vite middleware integration
 
 The current setup includes in-memory storage as a fallback, making it easy to develop and test without requiring a database connection. The Drizzle configuration is ready for PostgreSQL integration when needed.
+
+## Recent Changes
+
+### Latest Modifications
+
+**29.07.2025** - WhatsApp Integration
+- Added WhatsApp booking functionality with direct contact +43 664 93020595
+- Updated all booking buttons to redirect to WhatsApp with pre-filled message
+- Service-specific messages include selected service name
+- Implemented openWhatsAppBooking utility function

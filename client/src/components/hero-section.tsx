@@ -1,4 +1,5 @@
 import { Star, Play, ArrowDown } from "lucide-react";
+import { openWhatsAppBooking } from "@/lib/utils";
 
 export default function HeroSection() {
   const scrollToSection = (sectionId: string) => {
@@ -34,10 +35,10 @@ export default function HeroSection() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <button
-                onClick={() => scrollToSection("contact")}
+                onClick={() => openWhatsAppBooking()}
                 className="bg-black text-white px-8 py-4 rounded-full hover:bg-gradient-to-r hover:from-yellow-600 hover:to-yellow-700 hover:shadow-lg hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-300 font-medium text-lg"
               >
-                Записаться онлайн
+                Записаться через WhatsApp
               </button>
               <button
                 onClick={() => scrollToSection("gallery")}
