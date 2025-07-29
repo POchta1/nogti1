@@ -157,19 +157,19 @@ export default function ContactSection() {
               <div className="flex flex-col items-center space-y-4">
                 <a
                   href="https://www.instagram.com/solo.miia_nail/"
-                  className="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"
+                  className="w-[120px] h-[120px] bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Instagram size={20} />
+                  <Instagram size={60} />
                 </a>
                 <a
                   href="https://wa.me/4366493020595"
-                  className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"
+                  className="w-[120px] h-[120px] bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <MessageCircle size={20} />
+                  <MessageCircle size={60} />
                 </a>
               </div>
             </div>
