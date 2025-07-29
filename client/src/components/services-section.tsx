@@ -145,7 +145,7 @@ export default function ServicesSection() {
                     </span>
                     <div className="flex items-center text-gray-500 text-sm">
                       <Clock size={14} className="mr-1" />
-                      {service.duration} час{service.duration.includes('-') || parseFloat(service.duration) > 1 ? 'а' : ''}
+                      {service.duration}
                     </div>
                   </div>
 
@@ -192,7 +192,7 @@ export default function ServicesSection() {
                   </span>
                   <div className="flex items-center text-gray-500 text-sm">
                     <Clock size={14} className="mr-1" />
-                    {service.duration} час{service.duration.includes('-') || parseFloat(service.duration) > 1 ? 'а' : ''}
+                    {service.duration}
                   </div>
                 </div>
 
