@@ -1,4 +1,5 @@
 import { useTranslation } from "@/hooks/use-translation";
+import { Instagram } from "lucide-react";
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -57,14 +58,19 @@ export default function Footer() {
             <div className="space-y-2 text-gray-400">
               <p>{t('addressText')}</p>
               <p>+43 664 93020595</p>
-              <a
-                href="https://www.instagram.com/solo.miia_nail/"
-                className="text-dusty-rose hover:underline block"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                @solo.miia_nail
-              </a>
+              
+              <div className="mt-4">
+                <h5 className="text-lg font-semibold mb-3 text-white">{t('socialMedia')}</h5>
+                <a
+                  href="https://www.instagram.com/solo.miia_nail/"
+                  className="inline-flex items-center gap-2 text-dusty-rose hover:text-white transition-colors group"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Instagram className="w-6 h-6 group-hover:scale-110 transition-transform" />
+                  <span>@solo.miia_nail</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
