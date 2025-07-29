@@ -43,12 +43,12 @@ const servicesData: ServiceData[] = [
     icon: 'hand-sparkles'
   },
   {
-    id: 'nail-art',
-    nameKey: 'nailArt',
-    descKey: 'nailArtDesc',
-    price: '+5€',
-    duration: '2-3',
-    icon: 'palette'
+    id: 'gel-coating',
+    nameKey: 'gelCoating',
+    descKey: 'gelCoatingDesc',
+    price: 'от 45€',
+    duration: '1',
+    icon: 'sparkles'
   },
   {
     id: 'extension',
@@ -67,12 +67,12 @@ const servicesData: ServiceData[] = [
     icon: 'heart'
   },
   {
-    id: 'gel-coating',
-    nameKey: 'gelCoating',
-    descKey: 'gelCoatingDesc',
-    price: 'от 45€',
-    duration: '1',
-    icon: 'sparkles'
+    id: 'nail-art',
+    nameKey: 'nailArt',
+    descKey: 'nailArtDesc',
+    price: '+5€',
+    duration: '2-3',
+    icon: 'palette'
   },
   {
     id: 'coating-removal',
