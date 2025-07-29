@@ -157,7 +157,7 @@ export default function ContactSection() {
               <div className="flex flex-col space-y-4">
                 <a
                   href="https://www.instagram.com/solo.miia_nail/"
-                  className="w-12 h-12 bg-gradient-to-br from-dusty-rose to-warm-gold rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"
+                  className="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
