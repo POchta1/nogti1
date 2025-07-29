@@ -102,15 +102,14 @@ export default function ServicesSection() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto items-stretch">
           {servicesData.map((service) => {
             const IconComponent = iconMap[service.icon];
             
             return (
               <div
                 key={service.id}
-                className="group bg-gray-50 border-2 border-transparent hover:border-elegant-gold p-6 rounded-3xl transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer"
-                style={{ aspectRatio: '1/1' }}
+                className="group bg-gray-50 border-2 border-transparent hover:border-elegant-gold p-6 rounded-3xl transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer flex flex-col h-full"
               >
                 {/* Icon */}
                 <div className="w-16 h-16 bg-elegant-gold rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
@@ -121,7 +120,7 @@ export default function ServicesSection() {
                 <h3 className="text-xl font-bold text-black mb-4 group-hover:text-elegant-gold transition-colors">
                   {t(service.nameKey)}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
                   {t(service.descKey)}
                 </p>
 

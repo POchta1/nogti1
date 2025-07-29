@@ -88,11 +88,13 @@ The current setup includes in-memory storage as a fallback, making it easy to de
 - Service-specific messages include selected service name
 - Implemented openWhatsAppBooking utility function
 
-**29.07.2025** - Multi-language Support
-- Added support for German, English, and Ukrainian languages
+**29.07.2025** - Multi-language Support (Restored and Updated)
+- Restored support for German, English, and Ukrainian languages (removed Russian)
+- Set German as default language per user request
+- Added language selection modal that appears on first visit
 - Implemented LanguageContext and useTranslation hook
 - Created comprehensive translation system with 150+ translated strings
 - Added language selector component with flag icons
-- Auto-detects browser language as default
 - Saves language preference to localStorage
 - WhatsApp messages now sent in selected language
+- Fixed service cards layout to ensure equal heights
