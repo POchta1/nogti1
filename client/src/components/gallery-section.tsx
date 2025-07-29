@@ -51,7 +51,7 @@ export default function GallerySection() {
 
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
           {displayItems.map((item, index) => (
             <div 
               key={item.id} 
@@ -59,8 +59,8 @@ export default function GallerySection() {
                 index % 3 === 0 ? 'md:col-span-2 lg:col-span-1' : ''
               }`}
             >
-              <div className="relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2">
-                <div className="aspect-[4/5] overflow-hidden">
+              <div className="relative overflow-hidden rounded-xl sm:rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2">
+                <div className="aspect-[3/4] sm:aspect-[4/5] overflow-hidden">
                   <img
                     src={item.imageUrl}
                     alt={item.description || item.title}
