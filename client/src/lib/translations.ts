@@ -33,6 +33,7 @@ export const translations = {
     servicesTitle: 'Was ich anbiete',
     servicesDescription: 'Professionelle Nail-Art-Dienstleistungen mit Premium-Materialien und individuellem Ansatz für jeden Kunden',
     bookService: 'Buchen',
+    from: 'ab',
     
     // Services consultation
     consultationTitle: 'Wissen Sie nicht, was Sie wählen sollen?',
@@ -135,6 +136,7 @@ export const translations = {
     servicesTitle: 'What I offer',
     servicesDescription: 'Professional nail art services with premium materials and individual approach to each client',
     bookService: 'Book',
+    from: 'from',
     
     // Services consultation
     consultationTitle: "Don't know what to choose?",
@@ -237,6 +239,7 @@ export const translations = {
     servicesTitle: 'Що я пропоную',
     servicesDescription: 'Професійні послуги nail-арту з використанням преміальних матеріалів та індивідуальним підходом до кожного клієнта',
     bookService: 'Записатися',
+    from: 'від',
     
     // Services consultation
     consultationTitle: 'Не знаєте, що обрати?',
