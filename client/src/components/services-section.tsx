@@ -115,37 +115,36 @@ export default function ServicesSection() {
 
         {/* Services Grid */}
         <div className="max-w-6xl mx-auto">
-          {/* Unified grid - better mobile experience */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-            {servicesData.map((service) => {
+          {/* First row - 3 larger services */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            {servicesData.slice(0, 3).map((service) => {
               const IconComponent = iconMap[service.icon];
               
               return (
                 <div
                   key={service.id}
-                  className="group bg-gray-50 border-2 border-transparent hover:border-yellow-500 p-4 sm:p-6 rounded-2xl sm:rounded-3xl transition-all duration-500 hover:shadow-xl hover:shadow-yellow-500/20 hover:-translate-y-2 cursor-pointer flex flex-col h-full"
+                  className="group bg-gray-50 border-2 border-transparent hover:border-yellow-500 p-6 rounded-3xl transition-all duration-500 hover:shadow-xl hover:shadow-yellow-500/20 hover:-translate-y-2 cursor-pointer flex flex-col h-full"
                 >
                   {/* Icon */}
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-yellow-500 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                    <IconComponent className="text-white" size={20} />
+                  <div className="w-16 h-16 bg-yellow-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                    <IconComponent className="text-white" size={24} />
                   </div>
 
                   {/* Service Info */}
-                  <h3 className="text-lg sm:text-xl font-bold text-black mb-3 sm:mb-4 group-hover:text-yellow-600 transition-colors duration-500 leading-tight">
+                  <h3 className="text-xl font-bold text-black mb-4 group-hover:text-yellow-600 transition-colors duration-500 leading-tight">
                     {t(service.nameKey)}
                   </h3>
-                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6 flex-grow">
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
                     {t(service.descKey)}
                   </p>
 
                   {/* Price and Duration */}
-                  <div className="flex justify-between items-center mb-4 sm:mb-6">
-                    <span className="text-lg sm:text-2xl font-bold text-black group-hover:text-yellow-600 transition-colors duration-500">
+                  <div className="flex justify-between items-center mb-6">
+                    <span className="text-2xl font-bold text-black group-hover:text-yellow-600 transition-colors duration-500">
                       {service.price.startsWith('от') ? service.price.replace('от', t('from')) : service.price}
                     </span>
-                    <div className="flex items-center text-gray-500 text-xs sm:text-sm">
-                      <Clock size={12} className="mr-1 sm:hidden" />
-                      <Clock size={14} className="mr-1 hidden sm:block" />
+                    <div className="flex items-center text-gray-500 text-sm">
+                      <Clock size={16} className="mr-1" />
                       {service.duration}
                     </div>
                   </div>
@@ -153,10 +152,57 @@ export default function ServicesSection() {
                   {/* Book Button */}
                   <button
                     onClick={() => openWhatsAppBooking(language, t(service.nameKey))}
-                    className="w-full bg-black text-white py-2.5 sm:py-3 rounded-xl sm:rounded-2xl text-sm sm:text-base font-medium hover:bg-yellow-500 hover:shadow-lg hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-500 flex items-center justify-center group"
+                    className="w-full bg-black text-white py-3 rounded-2xl text-base font-medium hover:bg-yellow-500 hover:shadow-lg hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-500 flex items-center justify-center group"
                   >
                     {t('bookService')}
-                    <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform sm:size-4" />
+                    <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Second row - 4 smaller services */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {servicesData.slice(3).map((service) => {
+              const IconComponent = iconMap[service.icon];
+              
+              return (
+                <div
+                  key={service.id}
+                  className="group bg-gray-50 border-2 border-transparent hover:border-yellow-500 p-4 rounded-2xl transition-all duration-500 hover:shadow-xl hover:shadow-yellow-500/20 hover:-translate-y-2 cursor-pointer flex flex-col h-full"
+                >
+                  {/* Icon */}
+                  <div className="w-12 h-12 bg-yellow-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                    <IconComponent className="text-white" size={18} />
+                  </div>
+
+                  {/* Service Info */}
+                  <h3 className="text-base font-bold text-black mb-3 group-hover:text-yellow-600 transition-colors duration-500 leading-tight">
+                    {t(service.nameKey)}
+                  </h3>
+                  <p className="text-gray-600 text-xs leading-relaxed mb-4 flex-grow">
+                    {t(service.descKey)}
+                  </p>
+
+                  {/* Price and Duration */}
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="text-lg font-bold text-black group-hover:text-yellow-600 transition-colors duration-500">
+                      {service.price.startsWith('от') ? service.price.replace('от', t('from')) : service.price}
+                    </span>
+                    <div className="flex items-center text-gray-500 text-xs">
+                      <Clock size={12} className="mr-1" />
+                      {service.duration}
+                    </div>
+                  </div>
+
+                  {/* Book Button */}
+                  <button
+                    onClick={() => openWhatsAppBooking(language, t(service.nameKey))}
+                    className="w-full bg-black text-white py-2.5 rounded-xl text-sm font-medium hover:bg-yellow-500 hover:shadow-lg hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-500 flex items-center justify-center group"
+                  >
+                    {t('bookService')}
+                    <ArrowRight size={12} className="ml-2 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
               );
