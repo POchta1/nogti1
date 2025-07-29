@@ -5,12 +5,15 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export function openWhatsAppBooking(serviceName?: string) {
+import type { Language } from './translations';
+import { getTranslation } from './translations';
+
+export function openWhatsAppBooking(serviceName?: string, language: Language = 'en') {
   const phoneNumber = "4366493020595"; // WhatsApp format without + and spaces
-  let message = "Привет! Хочу записаться на маникюр.";
+  let message = getTranslation('whatsappBooking', language);
   
   if (serviceName) {
-    message += ` Интересует услуга: ${serviceName}.`;
+    message += ` ${getTranslation('whatsappService', language)}${serviceName}.`;
   }
   
   const encodedMessage = encodeURIComponent(message);
