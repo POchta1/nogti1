@@ -11,10 +11,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { MapPin, Phone, Clock, Instagram } from "lucide-react";
+import { useTranslation } from "@/hooks/use-translation";
 
 export default function ContactSection() {
   const { toast } = useToast();
   const queryClient = useQueryClient();
+  const { t } = useTranslation();
 
   const form = useForm<InsertBooking>({
     resolver: zodResolver(insertBookingSchema),
@@ -34,16 +36,16 @@ export default function ContactSection() {
     },
     onSuccess: () => {
       toast({
-        title: "Заявка отправлена!",
-        description: "Я свяжусь с вами в течение часа для подтверждения записи.",
+        title: t('requestSent'),
+        description: t('requestSentDesc'),
       });
       form.reset();
       queryClient.invalidateQueries({ queryKey: ["/api/bookings"] });
     },
     onError: () => {
       toast({
-        title: "Ошибка",
-        description: "Не удалось отправить заявку. Попробуйте еще раз.",
+        title: t('error'),
+        description: t('requestError'),
         variant: "destructive",
       });
     },
@@ -58,10 +60,10 @@ export default function ContactSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            Контакты
+            {t('contactTitle')}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Свяжитесь со мной для записи на прием или консультации
+            {t('contactDescription')}
           </p>
         </div>
 
@@ -69,7 +71,7 @@ export default function ContactSection() {
           {/* Contact Information */}
           <div>
             <h3 className="font-playfair text-2xl font-bold text-gray-800 mb-8">
-              Информация для связи
+              {t('contactInfo')}
             </h3>
 
             <div className="space-y-6">
@@ -78,11 +80,9 @@ export default function ContactSection() {
                   <MapPin className="text-white" size={20} />
                 </div>
                 <div>
-                  <h4 className="font-medium text-gray-800 mb-1">Адрес</h4>
+                  <h4 className="font-medium text-gray-800 mb-1">{t('address')}</h4>
                   <p className="text-gray-600">
-                    г. Москва, ул. Арбат, 12
-                    <br />
-                    студия красоты "Элегант"
+                    {t('addressText')}
                   </p>
                 </div>
               </div>
@@ -92,8 +92,8 @@ export default function ContactSection() {
                   <Phone className="text-white" size={20} />
                 </div>
                 <div>
-                  <h4 className="font-medium text-gray-800 mb-1">Телефон</h4>
-                  <p className="text-gray-600">+7 (495) 123-45-67</p>
+                  <h4 className="font-medium text-gray-800 mb-1">{t('phone')}</h4>
+                  <p className="text-gray-600">+43 664 93020595</p>
                 </div>
               </div>
 
@@ -102,11 +102,9 @@ export default function ContactSection() {
                   <Clock className="text-white" size={20} />
                 </div>
                 <div>
-                  <h4 className="font-medium text-gray-800 mb-1">Время работы</h4>
+                  <h4 className="font-medium text-gray-800 mb-1">{t('workingHours')}</h4>
                   <p className="text-gray-600">
-                    Пн-Пт: 10:00 - 20:00
-                    <br />
-                    Сб-Вс: 11:00 - 19:00
+                    {t('workingHoursText')}
                   </p>
                 </div>
               </div>
@@ -116,7 +114,7 @@ export default function ContactSection() {
                   <Instagram className="text-white" size={20} />
                 </div>
                 <div>
-                  <h4 className="font-medium text-gray-800 mb-1">Instagram</h4>
+                  <h4 className="font-medium text-gray-800 mb-1">{t('instagram')}</h4>
                   <a
                     href="https://www.instagram.com/solo.miia_nail/"
                     className="text-dusty-rose hover:underline"
@@ -132,7 +130,7 @@ export default function ContactSection() {
             {/* Social Media */}
             <div className="mt-8">
               <h4 className="font-playfair text-xl font-bold text-gray-800 mb-4">
-                Социальные сети
+                {t('socialMedia')}
               </h4>
               <div className="flex space-x-4">
                 <a
@@ -150,7 +148,7 @@ export default function ContactSection() {
           {/* Contact Form */}
           <div>
             <h3 className="font-playfair text-2xl font-bold text-gray-800 mb-8">
-              Запись на прием
+              {t('bookingTitle')}
             </h3>
 
             <Form {...form}>
@@ -160,10 +158,10 @@ export default function ContactSection() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Ваше имя</FormLabel>
+                      <FormLabel>{t('yourName')}</FormLabel>
                       <FormControl>
                         <Input
-                          placeholder="Введите ваше имя"
+                          placeholder={t('enterName')}
                           className="rounded-2xl border-2 focus:border-yellow-500 hover:border-yellow-400 focus:ring-2 focus:ring-yellow-500/20 transition-all duration-300"
                           {...field}
                         />
@@ -178,10 +176,10 @@ export default function ContactSection() {
                   name="phone"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Телефон</FormLabel>
+                      <FormLabel>{t('phone')}</FormLabel>
                       <FormControl>
                         <Input
-                          placeholder="+7 (___) ___-__-__"
+                          placeholder="+43 (___) ___-____"
                           className="rounded-2xl border-2 focus:border-yellow-500 hover:border-yellow-400 focus:ring-2 focus:ring-yellow-500/20 transition-all duration-300"
                           {...field}
                         />
@@ -196,20 +194,20 @@ export default function ContactSection() {
                   name="service"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Услуга</FormLabel>
+                      <FormLabel>{t('service')}</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger className="rounded-2xl border-2 focus:border-yellow-500 hover:border-yellow-400 focus:ring-2 focus:ring-yellow-500/20 transition-all duration-300">
-                            <SelectValue placeholder="Выберите услугу" />
+                            <SelectValue placeholder={t('selectService')} />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="classic">Классический маникюр</SelectItem>
-                          <SelectItem value="nail-art">Nail Art</SelectItem>
-                          <SelectItem value="extension">Наращивание</SelectItem>
-                          <SelectItem value="spa">SPA-уход</SelectItem>
-                          <SelectItem value="french">Французский маникюр</SelectItem>
-                          <SelectItem value="gel">Покрытие гель-лаком</SelectItem>
+                          <SelectItem value="classic">{t('classicManicure')}</SelectItem>
+                          <SelectItem value="nail-art">{t('nailArt')}</SelectItem>
+                          <SelectItem value="extension">{t('extension')}</SelectItem>
+                          <SelectItem value="spa">{t('spaCare')}</SelectItem>
+                          <SelectItem value="french">{t('frenchManicure')}</SelectItem>
+                          <SelectItem value="gel">{t('gelCoating')}</SelectItem>
                         </SelectContent>
                       </Select>
                       <FormMessage />
@@ -222,7 +220,7 @@ export default function ContactSection() {
                   name="preferredDate"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Предпочтительная дата</FormLabel>
+                      <FormLabel>{t('preferredDate')}</FormLabel>
                       <FormControl>
                         <Input
                           type="date"
@@ -240,10 +238,10 @@ export default function ContactSection() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Дополнительные пожелания</FormLabel>
+                      <FormLabel>{t('additionalWishes')}</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Расскажите о ваших пожеланиях к дизайну..."
+                          placeholder={t('designWishes')}
                           className="rounded-2xl border-2 focus:border-yellow-500 hover:border-yellow-400 focus:ring-2 focus:ring-yellow-500/20 resize-none transition-all duration-300"
                           rows={4}
                           {...field}
@@ -260,13 +258,13 @@ export default function ContactSection() {
                   disabled={bookingMutation.isPending}
                   className="w-full bg-black text-white py-3 rounded-2xl font-medium hover:bg-gradient-to-r hover:from-yellow-600 hover:to-yellow-700 hover:shadow-lg hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-300"
                 >
-                  {bookingMutation.isPending ? "Отправляем..." : "Отправить заявку"}
+                  {bookingMutation.isPending ? t('sending') : t('sendRequest')}
                 </Button>
               </form>
             </Form>
 
             <p className="text-sm text-gray-500 mt-4 text-center">
-              Я свяжусь с вами в течение часа для подтверждения записи
+              {t('contactConfirmation')}
             </p>
           </div>
         </div>
