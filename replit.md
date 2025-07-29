@@ -99,9 +99,11 @@ The current setup includes in-memory storage as a fallback, making it easy to de
 - WhatsApp messages now sent in selected language
 - Fixed service cards layout to ensure equal heights
 
-**29.07.2025** - Project Migration & Service Addition
+**29.07.2025** - Project Migration & Service Updates
 - Successfully migrated project from Replit Agent to Replit environment
 - Verified proper client/server separation and security practices
 - Added new service: "Снятие покрытия" (coating removal) for 10€, 30 minutes duration
+- Updated nail extension service: price range 60€-70€ with sizes S (60€), M (65€), L (70€)
+- Updated layout to display all 6 services in 3+3 grid format
 - Updated translations for all three languages (German, English, Ukrainian)
 - All systems tested and working correctly with multi-language support

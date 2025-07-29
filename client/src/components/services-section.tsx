@@ -52,7 +52,7 @@ const servicesData: ServiceData[] = [
     id: 'extension',
     nameKey: 'extension',
     descKey: 'extensionDesc',
-    price: 'от 60€',
+    price: '60€ - 70€',
     duration: '2.5',
     icon: 'gem'
   },
