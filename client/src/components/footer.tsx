@@ -48,14 +48,7 @@ export default function Footer() {
                   {t('extension')}
                 </button>
               </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("services")}
-                  className="hover:text-dusty-rose transition-colors"
-                >
-                  {t('spaCare')}
-                </button>
-              </li>
+              
             </ul>
           </div>
 
