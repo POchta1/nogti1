@@ -1,4 +1,3 @@
-import { useQuery } from "@tanstack/react-query";
 import { 
   HandHeart, 
   Palette, 
@@ -9,7 +8,6 @@ import {
   Clock,
   ArrowRight
 } from "lucide-react";
-import type { Service } from "@shared/schema";
 import { openWhatsAppBooking } from "@/lib/utils";
 import { useTranslation } from "@/hooks/use-translation";
 
@@ -22,40 +20,70 @@ const iconMap = {
   "sparkles": Sparkles,
 };
 
-export default function ServicesSection() {
-  const { data: services = [], isLoading } = useQuery<Service[]>({
-    queryKey: ["/api/services"],
-  });
-  const { t, language } = useTranslation();
+interface ServiceData {
+  id: string;
+  nameKey: string;
+  descKey: string;
+  price: string;
+  duration: string;
+  icon: keyof typeof iconMap;
+}
 
-  if (isLoading) {
-    return (
-      <section id="services" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="animate-pulse space-y-4">
-              <div className="h-12 bg-gray-200 rounded w-48 mx-auto" />
-              <div className="h-6 bg-gray-200 rounded w-96 mx-auto" />
-            </div>
-          </div>
-          <div className="grid grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {[...Array(6)].map((_, i) => (
-              <div key={i} className="animate-pulse bg-gray-100 border-2 border-elegant-gold p-6" style={{ aspectRatio: '1/1' }}>
-                <div className="w-16 h-16 bg-gray-200 rounded-2xl mb-6" />
-                <div className="h-6 bg-gray-200 rounded mb-4" />
-                <div className="h-4 bg-gray-200 rounded mb-2" />
-                <div className="h-4 bg-gray-200 rounded mb-6" />
-                <div className="flex justify-between">
-                  <div className="h-6 bg-gray-200 rounded w-20" />
-                  <div className="h-4 bg-gray-200 rounded w-16" />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    );
+const servicesData: ServiceData[] = [
+  {
+    id: 'classic-manicure',
+    nameKey: 'classicManicure',
+    descKey: 'classicManicureDesc',
+    price: '2500₽',
+    duration: '1.5',
+    icon: 'hand-sparkles'
+  },
+  {
+    id: 'nail-art',
+    nameKey: 'nailArt',
+    descKey: 'nailArtDesc',
+    price: '3500₽',
+    duration: '2-3',
+    icon: 'palette'
+  },
+  {
+    id: 'extension',
+    nameKey: 'extension',
+    descKey: 'extensionDesc',
+    price: '4000₽',
+    duration: '2.5',
+    icon: 'gem'
+  },
+  {
+    id: 'spa-care',
+    nameKey: 'spaCare',
+    descKey: 'spaCareDesc',
+    price: '3000₽',
+    duration: '2',
+    icon: 'spa'
+  },
+  {
+    id: 'french-manicure',
+    nameKey: 'frenchManicure',
+    descKey: 'frenchManicureDesc',
+    price: '2800₽',
+    duration: '1.5',
+    icon: 'heart'
+  },
+  {
+    id: 'gel-coating',
+    nameKey: 'gelCoating',
+    descKey: 'gelCoatingDesc',
+    price: '2200₽',
+    duration: '1',
+    icon: 'sparkles'
   }
+];
+
+export default function ServicesSection() {
+  const { t } = useTranslation();
+
+
 
   return (
     <section id="services" className="py-20 bg-white">
@@ -74,60 +102,51 @@ export default function ServicesSection() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {services.map((service, index) => {
-              const IconComponent = iconMap[service.icon as keyof typeof iconMap] || Sparkles;
-              
-              return (
-                <div
-                  key={service.id}
-                  className="w-full"
-                  style={{ aspectRatio: '1/1' }}
-                >
-                  <div className="group relative bg-white border-2 border-elegant-gold p-6 hover:shadow-2xl hover:shadow-yellow-500/20 hover:border-yellow-500 hover:bg-gradient-to-br hover:from-white hover:to-yellow-50 transition-all duration-500 w-full h-full flex flex-col justify-between">
-                    {/* Icon */}
-                    <div className="relative mb-4">
-                      <div className="w-16 h-16 bg-gradient-to-br from-gray-900 to-gray-700 flex items-center justify-center group-hover:scale-110 group-hover:from-yellow-600 group-hover:to-yellow-700 transition-all duration-300">
-                        <IconComponent className="text-white group-hover:text-yellow-100" size={28} />
-                      </div>
-                      <div className="absolute -top-1 -right-1 w-6 h-6 bg-elegant-gold rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-300"></div>
-                    </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {servicesData.map((service) => {
+            const IconComponent = iconMap[service.icon];
+            
+            return (
+              <div
+                key={service.id}
+                className="group bg-gray-50 border-2 border-transparent hover:border-elegant-gold p-6 rounded-3xl transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer"
+                style={{ aspectRatio: '1/1' }}
+              >
+                {/* Icon */}
+                <div className="w-16 h-16 bg-elegant-gold rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                  <IconComponent className="text-white" size={28} />
+                </div>
 
-                    {/* Content */}
-                    <div className="flex flex-col flex-grow">
-                      <h3 className="text-lg font-bold text-black mb-3 group-hover:text-yellow-800 transition-colors line-clamp-2">
-                        {service.name}
-                      </h3>
-                      <p className="text-sm text-gray-600 mb-4 leading-relaxed flex-grow line-clamp-3">
-                        {service.description}
-                      </p>
-                    </div>
-                      
-                      {/* Price and Duration */}
-                      <div className="mb-4">
-                        <div className="flex items-center justify-between">
-                          <span className="text-xl font-bold text-black group-hover:text-yellow-700 transition-colors">
-                            {service.price}
-                          </span>
-                          <div className="flex items-center space-x-1 text-gray-500">
-                            <Clock size={14} />
-                            <span className="text-sm">{service.duration}</span>
-                          </div>
-                        </div>
-                      </div>
+                {/* Service Info */}
+                <h3 className="text-xl font-bold text-black mb-4 group-hover:text-elegant-gold transition-colors">
+                  {t(service.nameKey)}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                  {t(service.descKey)}
+                </p>
 
-                      {/* CTA Button */}
-                      <button
-                        onClick={() => openWhatsAppBooking(service.name, language)}
-                        className="w-full bg-black text-white py-3 px-4 text-sm hover:bg-gradient-to-r hover:from-yellow-600 hover:to-yellow-700 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 flex items-center justify-center space-x-2 group/button"
-                      >
-                        <span>{t('bookService')}</span>
-                        <ArrowRight size={16} className="group-hover/button:translate-x-1 transition-transform" />
-                      </button>
+                {/* Price and Duration */}
+                <div className="flex justify-between items-center mb-6">
+                  <span className="text-2xl font-bold text-black group-hover:text-elegant-gold transition-colors">
+                    от {service.price}
+                  </span>
+                  <div className="flex items-center text-gray-500 text-sm">
+                    <Clock size={14} className="mr-1" />
+                    {service.duration} час{service.duration.includes('-') || parseFloat(service.duration) > 1 ? 'а' : ''}
                   </div>
                 </div>
-              );
-            })}
+
+                {/* Book Button */}
+                <button
+                  onClick={() => openWhatsAppBooking(t(service.nameKey))}
+                  className="w-full bg-black text-white py-3 rounded-2xl font-medium hover:bg-elegant-gold hover:shadow-lg hover:shadow-elegant-gold/30 hover:scale-105 transition-all duration-300 flex items-center justify-center group"
+                >
+                  {t('bookService')}
+                  <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
+            );
+          })}
         </div>
 
         {/* Bottom CTA */}
@@ -140,7 +159,7 @@ export default function ServicesSection() {
               {t('consultationDescription')}
             </p>
             <button
-              onClick={() => openWhatsAppBooking(t('whatsappConsultation'), language)}
+              onClick={() => openWhatsAppBooking(t('whatsappConsultation'))}
               className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors font-medium"
             >
               {t('getConsultation')}

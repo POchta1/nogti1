@@ -1,4 +1,4 @@
-export type Language = 'de' | 'en' | 'uk';
+export type Language = 'de' | 'en' | 'uk' | 'ru';
 
 export const translations = {
   de: {
@@ -38,6 +38,20 @@ export const translations = {
     consultationTitle: 'Wissen Sie nicht, was Sie wählen sollen?',
     consultationDescription: 'Buchen Sie eine kostenlose Beratung und wir finden gemeinsam die perfekte Variante für Ihre Nägel unter Berücksichtigung aller Wünsche',
     getConsultation: 'Beratung erhalten',
+    
+    // Service cards
+    classicManicure: 'Klassische Maniküre',
+    classicManicureDesc: 'Professionelle Nagel- und Nagelhautbehandlung mit Gel-Lack-Beschichtung.',
+    nailArt: 'Nail Art',
+    nailArtDesc: 'Exklusive Designs und künstlerische Malerei. Wir verwirklichen alle Ihre Ideen in einem einzigartigen Stil.',
+    extension: 'Nagelverlängerung',
+    extensionDesc: 'Nagelverlängerung mit Gel oder Acryl. Jede Länge und Form mit perfekter Beschichtung.',
+    spaCare: 'SPA-Pflege',
+    spaCareDesc: 'Umfassende Pflege für Hände und Nägel mit pflegenden Masken und Massage.',
+    frenchManicure: 'Französische Maniküre',
+    frenchManicureDesc: 'Elegante klassische French oder moderne Interpretationen mit farbigen Akzenten.',
+    gelCoating: 'Gel-Lack-Beschichtung',
+    gelCoatingDesc: 'Langanhaltende Gel-Lack-Beschichtung in jedem Farbton. Perfekter Glanz bis zu 3 Wochen.',
     
     // Gallery Section
     gallerySubtitle: 'Portfolio',
@@ -127,6 +141,20 @@ export const translations = {
     consultationDescription: 'Book a free consultation and we will find the perfect option for your nails together, taking into account all your wishes',
     getConsultation: 'Get consultation',
     
+    // Service cards
+    classicManicure: 'Classic Manicure',
+    classicManicureDesc: 'Professional nail and cuticle treatment with gel polish coating.',
+    nailArt: 'Nail Art',
+    nailArtDesc: 'Exclusive designs and artistic painting. We bring any of your ideas to life in a unique style.',
+    extension: 'Nail Extension',
+    extensionDesc: 'Gel or acrylic nail extensions. Any length and shape with perfect coating.',
+    spaCare: 'SPA Care',
+    spaCareDesc: 'Comprehensive hand and nail care with nourishing masks and massage.',
+    frenchManicure: 'French Manicure',
+    frenchManicureDesc: 'Elegant classic French or modern interpretations with colored accents.',
+    gelCoating: 'Gel Polish Coating',
+    gelCoatingDesc: 'Long-lasting gel polish coating in any shade. Perfect shine for up to 3 weeks.',
+    
     // Gallery Section
     gallerySubtitle: 'Portfolio',
     galleryTitle: 'My work',
@@ -215,6 +243,20 @@ export const translations = {
     consultationDescription: 'Запишіться на безкоштовну консультацію, і ми разом підберемо ідеальний варіант для ваших нігтів з урахуванням усіх побажань',
     getConsultation: 'Отримати консультацію',
     
+    // Service cards
+    classicManicure: 'Класичний манікюр',
+    classicManicureDesc: 'Професійна обробка нігтів і кутикули з покриттям гель-лаком.',
+    nailArt: 'Nail Art',
+    nailArtDesc: 'Ексклюзивні дизайни та художній розпис. Втілюємо будь-які ваші ідеї в унікальному стилі.',
+    extension: 'Нарощування',
+    extensionDesc: 'Нарощування нігтів гелем або акрилом. Будь-яка довжина та форма з ідеальним покриттям.',
+    spaCare: 'SPA-догляд',
+    spaCareDesc: 'Комплексний догляд за руками та нігтями з живильними масками та масажем.',
+    frenchManicure: 'Французький манікюр',
+    frenchManicureDesc: 'Елегантний класичний френч або сучасні інтерпретації з кольоровими акцентами.',
+    gelCoating: 'Покриття гель-лаком',
+    gelCoatingDesc: 'Стійке покриття гель-лаком будь-якого відтінку. Бездоганний блиск до 3 тижнів.',
+    
     // Gallery Section
     gallerySubtitle: 'Портфоліо',
     galleryTitle: 'Мої роботи',
@@ -263,6 +305,120 @@ export const translations = {
     whatsappBooking: 'Привіт! Хочу записатися на манікюр.',
     whatsappService: 'Цікавить послуга: ',
     whatsappConsultation: 'Консультація',
+  },
+  
+  ru: {
+    // Navigation
+    home: 'Главная',
+    services: 'Услуги',
+    gallery: 'Галерея',
+    contact: 'Контакты',
+    about: 'О мастере',
+    
+    // Hero Section
+    heroSubtitle: 'Профессиональный мастер маникюра',
+    heroTitle: 'Я создаю',
+    heroTitleAccent: 'красоту',
+    heroTitleEnd: 'на ваших ногтях',
+    heroDescription: 'Индивидуальный подход к каждому клиенту. Качественные материалы. Авторские дизайны. Более 5 лет опыта.',
+    bookWhatsApp: 'Записаться через WhatsApp',
+    viewWorks: 'Посмотреть работы',
+    
+    // Stats
+    happyClients: 'Довольных клиентов',
+    yearsExperience: 'Лет опыта',
+    quality: 'Качество',
+    
+    // Hero floating elements
+    availableNow: 'Доступна сейчас',
+    nextAppointment: 'Следующая запись',
+    tomorrow: 'Завтра 14:00',
+    viewPortfolio: 'Посмотреть портфолио',
+    
+    // Services Section
+    servicesSubtitle: 'Услуги',
+    servicesTitle: 'Что я предлагаю',
+    servicesDescription: 'Профессиональные услуги nail-арта с использованием премиальных материалов и индивидуальным подходом к каждому клиенту',
+    bookService: 'Записаться',
+    
+    // Services consultation
+    consultationTitle: 'Не знаете, что выбрать?',
+    consultationDescription: 'Запишитесь на бесплатную консультацию, и мы вместе подберем идеальный вариант для ваших ногтей с учетом всех пожеланий',
+    getConsultation: 'Получить консультацию',
+    
+    // Service cards
+    classicManicure: 'Классический маникюр',
+    classicManicureDesc: 'Профессиональная обработка ногтей и кутикулы с покрытием гель-лаком.',
+    nailArt: 'Nail Art',
+    nailArtDesc: 'Эксклюзивные дизайны и художественная роспись. Воплощаем любые ваши идеи в уникальном стиле.',
+    extension: 'Наращивание',
+    extensionDesc: 'Наращивание ногтей гелем или акрилом. Любая длина и форма с идеальным покрытием.',
+    spaCare: 'SPA-уход',
+    spaCareDesc: 'Комплексный уход за руками и ногтями с питательными масками и массажем.',
+    frenchManicure: 'Французский маникюр',
+    frenchManicureDesc: 'Элегантный классический френч или современные интерпретации с цветными акцентами.',
+    gelCoating: 'Покрытие гель-лаком',
+    gelCoatingDesc: 'Стойкое покрытие гель-лаком любого оттенка. Безупречный глянец до 3 недель.',
+    
+    // Gallery Section
+    gallerySubtitle: 'Портфолио',
+    galleryTitle: 'Мои работы',
+    galleryDescription: 'Откройте мои последние творения nail-арта и вдохновитесь для своего следующего дизайна',
+    galleryLiked: 'Понравилось?',
+    galleryLikedDesc: 'Запишитесь на консультацию и создадим уникальный дизайн для вас',
+    bookNow: 'Записаться сейчас',
+    
+    // Contact Section
+    contactTitle: 'Контакты',
+    contactDescription: 'Свяжитесь со мной для записи на прием или консультацию',
+    contactInfo: 'Контактная информация',
+    address: 'Адрес',
+    addressText: 'Вена, Австрия\nСтудия красоты "Элегант"',
+    phone: 'Телефон',
+    workingHours: 'Часы работы',
+    workingHoursText: 'Пн-Пт: 10:00 - 20:00\nСб-Вс: 11:00 - 19:00',
+    instagram: 'Instagram',
+    socialMedia: 'Социальные сети',
+    
+    // Contact Form
+    bookingForm: 'Форма записи',
+    bookingFormDescription: 'Заполните форму и я свяжусь с вами в течение часа',
+    bookingTitle: 'Запись на прием',
+    yourName: 'Ваше имя',
+    enterName: 'Введите ваше имя',
+    selectService: 'Выберите услугу',
+    preferredDate: 'Предпочтительная дата',
+    additionalWishes: 'Дополнительные пожелания',
+    designWishes: 'Расскажите о ваших пожеланиях к дизайну...',
+    sendRequest: 'Отправить заявку',
+    sending: 'Отправляем...',
+    contactConfirmation: 'Я свяжусь с вами в течение часа для подтверждения записи',
+    
+    // About Section
+    aboutMaster: 'О мастере',
+    masterName: 'Мария Соло',
+    aboutText1: 'Привет! Меня зовут Мария, и я профессиональный nail-мастер с более чем 5-летним опытом работы. Моя страсть к nail-арту началась еще в университете, и с тех пор я не перестаю совершенствовать свое мастерство и изучать новые техники.',
+    aboutText2: 'Каждый клиент для меня уникален, поэтому я всегда стремлюсь создать дизайн, который идеально подчеркнет вашу индивидуальность и стиль. Работаю только с премиальными материалами и соблюдаю все стандарты безопасности и гигиены.',
+    aboutText3: 'Моя миссия - дарить вам не только красивые ногти, но и отличное настроение. Приходите, и давайте вместе создадим что-то прекрасное!',
+    certificatesTitle: 'Сертификаты и награды:',
+    certifiedMaster: 'Сертифицированный мастер nail-арта',
+    contestWinner: 'Победитель конкурса "Лучший nail-дизайн 2023"',
+    masterCategory: 'Мастер высшей категории',
+    
+    // Footer
+    footerDescription: 'Профессиональный nail-арт и маникюр в Вене. Создаем красоту с любовью к деталям и индивидуальным подходом к каждому клиенту.',
+    footerCopyright: '© 2024 Solo Miia Nail. Все права защищены.',
+    
+    // Toasts
+    requestSent: 'Заявка отправлена!',
+    requestSentDesc: 'Я свяжусь с вами в течение часа для подтверждения записи.',
+    error: 'Ошибка',
+    requestError: 'Не удалось отправить заявку. Попробуйте еще раз.',
+    
+    // WhatsApp messages
+    whatsappBooking: 'Привет! Хочу записаться на маникюр.',
+    whatsappService: 'Интересует услуга: ',
+    whatsappConsultation: 'Консультация',
   }
 };
 
