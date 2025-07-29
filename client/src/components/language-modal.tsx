@@ -14,13 +14,8 @@ export function LanguageModal() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const hasSelectedLanguage = localStorage.getItem('selectedLanguage');
-    const hasVisitedBefore = localStorage.getItem('hasVisitedBefore');
-    
-    if (!hasSelectedLanguage || !hasVisitedBefore) {
-      setTimeout(() => setIsOpen(true), 100); // Small delay for smoother appearance
-      localStorage.setItem('hasVisitedBefore', 'true');
-    }
+    // Show modal on every page load/refresh
+    setTimeout(() => setIsOpen(true), 100); // Small delay for smoother appearance
   }, []);
 
   const handleLanguageSelect = (langCode: Language) => {
