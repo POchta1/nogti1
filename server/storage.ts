@@ -79,6 +79,14 @@ export class MemStorage implements IStorage {
         price: "от 45₽",
         duration: "1 час",
         icon: "sparkles"
+      },
+      {
+        id: randomUUID(),
+        name: "Снятие покрытия",
+        description: "Профессиональное и бережное снятие старого покрытия с ногтей.",
+        price: "10€",
+        duration: "30 минут",
+        icon: "eraser"
       }
     ];
 

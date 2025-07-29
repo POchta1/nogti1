@@ -98,3 +98,9 @@ The current setup includes in-memory storage as a fallback, making it easy to de
 - Saves language preference to localStorage
 - WhatsApp messages now sent in selected language
 - Fixed service cards layout to ensure equal heights
+
+**29.07.2025** - Project Migration & Service Addition
+- Successfully migrated project from Replit Agent to Replit environment
+- Verified proper client/server separation and security practices
+- Added new service: "Снятие покрытия" (coating removal) for 10€, 30 minutes duration
+- All systems tested and working correctly with multi-language support
