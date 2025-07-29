@@ -85,10 +85,7 @@ export default function HeroSection() {
                 </div>
               </div>
               
-              <div className="absolute bottom-8 left-8 bg-black/80 backdrop-blur-sm text-white p-4 rounded-2xl">
-                <div className="text-sm font-medium">{t('nextAppointment')}</div>
-                <div className="text-lg font-bold">{t('tomorrow')}</div>
-              </div>
+
             </div>
             
             {/* Decorative Elements */}
