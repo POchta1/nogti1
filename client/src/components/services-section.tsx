@@ -163,35 +163,35 @@ export default function ServicesSection() {
           </div>
 
           {/* Second row - 4 services */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {servicesData.slice(3).map((service) => {
               const IconComponent = iconMap[service.icon];
               
               return (
                 <div
                   key={service.id}
-                  className="group bg-gray-50 border-2 border-transparent hover:border-yellow-500 p-5 rounded-2xl transition-all duration-500 hover:shadow-xl hover:shadow-yellow-500/20 hover:-translate-y-2 cursor-pointer flex flex-col h-full"
+                  className="group bg-gray-50 border-2 border-transparent hover:border-yellow-500 p-7 rounded-2xl transition-all duration-500 hover:shadow-xl hover:shadow-yellow-500/20 hover:-translate-y-2 cursor-pointer flex flex-col h-full"
                 >
                   {/* Icon */}
-                  <div className="w-14 h-14 bg-yellow-500 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                    <IconComponent className="text-white" size={20} />
+                  <div className="w-18 h-18 bg-yellow-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                    <IconComponent className="text-white" size={26} />
                   </div>
 
                   {/* Service Info */}
-                  <h3 className="text-lg font-bold text-black mb-3 group-hover:text-yellow-600 transition-colors duration-500 leading-tight">
+                  <h3 className="text-xl font-bold text-black mb-4 group-hover:text-yellow-600 transition-colors duration-500 leading-tight">
                     {t(service.nameKey)}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-5 flex-grow">
+                  <p className="text-gray-600 text-base leading-relaxed mb-6 flex-grow">
                     {t(service.descKey)}
                   </p>
 
                   {/* Price and Duration */}
-                  <div className="flex justify-between items-center mb-5">
-                    <span className="text-xl font-bold text-black group-hover:text-yellow-600 transition-colors duration-500">
+                  <div className="flex justify-between items-center mb-6">
+                    <span className="text-2xl font-bold text-black group-hover:text-yellow-600 transition-colors duration-500">
                       {service.price.startsWith('от') ? service.price.replace('от', t('from')) : service.price}
                     </span>
-                    <div className="flex items-center text-gray-500 text-sm">
-                      <Clock size={14} className="mr-1" />
+                    <div className="flex items-center text-gray-500 text-base">
+                      <Clock size={18} className="mr-1" />
                       {service.duration}
                     </div>
                   </div>
@@ -199,10 +199,10 @@ export default function ServicesSection() {
                   {/* Book Button */}
                   <button
                     onClick={() => openWhatsAppBooking(language, t(service.nameKey))}
-                    className="w-full bg-black text-white py-3 rounded-xl text-sm font-medium hover:bg-yellow-500 hover:shadow-lg hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-500 flex items-center justify-center group"
+                    className="w-full bg-black text-white py-4 rounded-xl text-base font-medium hover:bg-yellow-500 hover:shadow-lg hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-500 flex items-center justify-center group"
                   >
                     {t('bookService')}
-                    <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
               );
