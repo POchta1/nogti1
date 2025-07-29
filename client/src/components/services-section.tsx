@@ -50,17 +50,9 @@ const servicesData: ServiceData[] = [
     id: 'extension',
     nameKey: 'extension',
     descKey: 'extensionDesc',
-    price: '60€',
+    price: 'от 60€',
     duration: '2.5',
     icon: 'gem'
-  },
-  {
-    id: 'spa-care',
-    nameKey: 'spaCare',
-    descKey: 'spaCareDesc',
-    price: '30€',
-    duration: '2',
-    icon: 'spa'
   },
   {
     id: 'french-manicure',
@@ -74,7 +66,7 @@ const servicesData: ServiceData[] = [
     id: 'gel-coating',
     nameKey: 'gelCoating',
     descKey: 'gelCoatingDesc',
-    price: '45€',
+    price: 'от 45€',
     duration: '1',
     icon: 'sparkles'
   }
