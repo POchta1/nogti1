@@ -154,7 +154,7 @@ export default function ContactSection() {
               <h4 className="text-xl font-bold text-gray-800 mb-4 text-left">
                 {t('socialMedia')}
               </h4>
-              <div className="flex flex-col items-start space-y-4 -ml-[120px]">
+              <div className="flex flex-col items-start space-y-4 ml-[60px]">
                 <a
                   href="https://www.instagram.com/solo.miia_nail/"
                   className="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"
