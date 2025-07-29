@@ -14,8 +14,11 @@ export function LanguageModal() {
 
   useEffect(() => {
     const hasSelectedLanguage = localStorage.getItem('selectedLanguage');
-    if (!hasSelectedLanguage) {
-      setIsOpen(true);
+    const hasVisitedBefore = localStorage.getItem('hasVisitedBefore');
+    
+    if (!hasSelectedLanguage || !hasVisitedBefore) {
+      setTimeout(() => setIsOpen(true), 100); // Small delay for smoother appearance
+      localStorage.setItem('hasVisitedBefore', 'true');
     }
   }, []);
 
