@@ -44,7 +44,7 @@ export function LanguageModal() {
             <button
               key={lang.code}
               onClick={() => handleLanguageSelect(lang.code)}
-              className="w-full flex items-center space-x-4 p-4 rounded-xl hover:bg-gray-50 transition-all duration-200 border-2 border-transparent hover:border-yellow-500/20 hover:scale-[1.02] group"
+              className="w-full flex items-center space-x-4 p-4 rounded-xl hover:bg-gray-50 transition-all duration-300 border-2 border-black hover:border-yellow-500 hover:scale-[1.02] group"
             >
               <span className="text-2xl">{lang.flag}</span>
               <div className="flex-1 text-left">
