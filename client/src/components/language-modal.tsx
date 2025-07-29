@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLanguage } from '@/lib/language-context';
 import type { Language } from '@/lib/translations';
+import logoImage from '@assets/image_1753812012479.png';
 
 const languages = [
   { code: 'de' as Language, name: 'Deutsch', flag: '🇩🇪', greeting: 'Wählen Sie Ihre Sprache' },
@@ -34,11 +35,13 @@ export function LanguageModal() {
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center p-4 animate-in fade-in duration-300">
       <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 transform animate-in zoom-in-90 fade-in duration-300 slide-in-from-bottom-4">
         <div className="text-center mb-6">
-          <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span className="text-2xl">💅</span>
+          <div className="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+            <img 
+              src={logoImage} 
+              alt="Solo Miia Logo" 
+              className="w-full h-full object-contain"
+            />
           </div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">Solo Miia</h2>
-          <p className="text-gray-600">Nail Studio</p>
         </div>
         
         <div className="space-y-3">
