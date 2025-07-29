@@ -91,7 +91,7 @@ export default function ContactSection() {
     <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
             {t('contactTitle')}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -102,7 +102,7 @@ export default function ContactSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Contact Information */}
           <div>
-            <h3 className="font-playfair text-2xl font-bold text-gray-800 mb-8">
+            <h3 className="text-2xl font-bold text-gray-800 mb-8">
               {t('contactInfo')}
             </h3>
 
@@ -151,7 +151,7 @@ export default function ContactSection() {
 
             {/* Social Media */}
             <div className="mt-8">
-              <h4 className="font-playfair text-xl font-bold text-gray-800 mb-4">
+              <h4 className="text-xl font-bold text-gray-800 mb-4">
                 {t('socialMedia')}
               </h4>
               <div className="flex space-x-4">
@@ -169,7 +169,7 @@ export default function ContactSection() {
 
           {/* Contact Form */}
           <div>
-            <h3 className="font-playfair text-2xl font-bold text-gray-800 mb-8">
+            <h3 className="text-2xl font-bold text-gray-800 mb-8">
               {t('bookingTitle')}
             </h3>
 

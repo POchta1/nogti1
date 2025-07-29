@@ -9,10 +9,10 @@ export default function AboutSection() {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="order-2 lg:order-1">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
               {t('aboutMaster')}
             </h2>
-            <h3 className="text-2xl font-playfair text-elegant-gold mb-6">
+            <h3 className="text-2xl text-elegant-gold mb-6">
               {t('masterName')}
             </h3>
 
@@ -32,13 +32,13 @@ export default function AboutSection() {
 
             <div className="mt-8 grid grid-cols-2 gap-6">
               <div className="text-center p-4 bg-gray-100 rounded-2xl hover:bg-gradient-to-br hover:from-yellow-50 hover:to-yellow-100 hover:shadow-lg hover:shadow-yellow-500/20 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl font-bold text-elegant-gold font-playfair group-hover:animate-pulse">
+                <div className="text-3xl font-bold text-elegant-gold group-hover:animate-pulse">
                   500+
                 </div>
                 <div className="text-gray-600">{t('happyClients')}</div>
               </div>
               <div className="text-center p-4 bg-gray-100 rounded-2xl hover:bg-gradient-to-br hover:from-yellow-50 hover:to-yellow-100 hover:shadow-lg hover:shadow-yellow-500/20 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl font-bold text-elegant-gold font-playfair group-hover:animate-pulse">
+                <div className="text-3xl font-bold text-elegant-gold group-hover:animate-pulse">
                   5
                 </div>
                 <div className="text-gray-600">{t('yearsExperience')}</div>
@@ -46,7 +46,7 @@ export default function AboutSection() {
             </div>
 
             <div className="mt-8">
-              <h4 className="font-playfair text-xl font-bold text-gray-800 mb-4">
+              <h4 className="text-xl font-bold text-gray-800 mb-4">
                 {t('certificatesTitle')}
               </h4>
               <ul className="space-y-2 text-gray-600">
