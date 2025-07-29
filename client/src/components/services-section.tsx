@@ -50,7 +50,7 @@ const servicesData: ServiceData[] = [
     id: 'extension',
     nameKey: 'extension',
     descKey: 'extensionDesc',
-    price: '40€',
+    price: '60€',
     duration: '2.5',
     icon: 'gem'
   },
@@ -74,7 +74,7 @@ const servicesData: ServiceData[] = [
     id: 'gel-coating',
     nameKey: 'gelCoating',
     descKey: 'gelCoatingDesc',
-    price: '22€',
+    price: '45€',
     duration: '1',
     icon: 'sparkles'
   }

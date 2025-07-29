@@ -52,7 +52,7 @@ export class MemStorage implements IStorage {
         id: randomUUID(),
         name: "Наращивание",
         description: "Наращивание ногтей гелем или акрилом. Любая длина и форма с идеальным покрытием.",
-        price: "от 4000₽",
+        price: "от 60₽",
         duration: "2.5 часа",
         icon: "gem"
       },
@@ -76,7 +76,7 @@ export class MemStorage implements IStorage {
         id: randomUUID(),
         name: "Покрытие гель-лаком",
         description: "Стойкое покрытие гель-лаком любого оттенка. Безупречный глянец до 3 недель.",
-        price: "от 2200₽",
+        price: "от 45₽",
         duration: "1 час",
         icon: "sparkles"
       }
