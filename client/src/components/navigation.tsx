@@ -78,8 +78,9 @@ export default function Navigation() {
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-white border-t">
           <div className="px-4 py-6 space-y-4">
-            <div className="mb-4">
-              <LanguageSelector />
+            <div className="mb-4 flex items-center justify-between">
+              <span className="text-gray-600 font-medium">{t('changeLanguage')}</span>
+              <LanguageSelector isMobile={true} />
             </div>
             <button
               onClick={() => scrollToSection("home")}

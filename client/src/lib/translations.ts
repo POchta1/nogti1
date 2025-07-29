@@ -7,6 +7,7 @@ export const translations = {
     services: 'Dienstleistungen',
     gallery: 'Galerie',
     contact: 'Kontakt',
+    changeLanguage: 'Sprache wechseln',
     
     // Hero Section
     heroSubtitle: 'Professionelle Nagelkünstlerin',
@@ -122,6 +123,7 @@ export const translations = {
     services: 'Services',
     gallery: 'Gallery',
     contact: 'Contact',
+    changeLanguage: 'Change Language',
     
     // Hero Section
     heroSubtitle: 'Professional Nail Artist',
@@ -237,6 +239,7 @@ export const translations = {
     services: 'Послуги',
     gallery: 'Галерея',
     contact: 'Контакти',
+    changeLanguage: 'Змінити мову',
     
     // Hero Section
     heroSubtitle: 'Професійний майстер манікюру',

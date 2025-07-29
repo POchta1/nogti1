@@ -9,7 +9,7 @@ const languages = [
   { code: 'uk' as Language, name: 'Українська', flag: '🇺🇦' },
 ];
 
-export function LanguageSelector() {
+export function LanguageSelector({ isMobile = false }: { isMobile?: boolean }) {
   const { language, setLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   
@@ -19,11 +19,19 @@ export function LanguageSelector() {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors border border-white/20"
+        className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors border ${
+          isMobile 
+            ? 'bg-gray-100 hover:bg-gray-200 border-gray-200' 
+            : 'bg-white/10 backdrop-blur-sm hover:bg-white/20 border-white/20'
+        }`}
       >
         <span className="text-lg">{currentLanguage?.flag}</span>
-        <span className="text-sm font-medium text-white">{currentLanguage?.code.toUpperCase()}</span>
-        <ChevronDown size={16} className={`text-white transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+        <span className={`text-sm font-medium ${isMobile ? 'text-gray-700' : 'text-white'}`}>
+          {currentLanguage?.code.toUpperCase()}
+        </span>
+        <ChevronDown size={16} className={`transition-transform ${isOpen ? 'rotate-180' : ''} ${
+          isMobile ? 'text-gray-700' : 'text-white'
+        }`} />
       </button>
       
       {isOpen && (
