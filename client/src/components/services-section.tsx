@@ -127,7 +127,7 @@ export default function ServicesSection() {
                 {/* Price and Duration */}
                 <div className="flex justify-between items-center mb-6">
                   <span className="text-2xl font-bold text-black group-hover:text-yellow-600 transition-colors duration-500">
-                    от {service.price}
+                    {t('from')} {service.price}
                   </span>
                   <div className="flex items-center text-gray-500 text-sm">
                     <Clock size={14} className="mr-1" />
