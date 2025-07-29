@@ -75,7 +75,10 @@ export const translations = {
     
     // Contact Form
     bookingForm: 'Buchungsformular',
+    bookingTitle: 'Termin buchen',
     bookingFormDescription: 'Füllen Sie das Formular aus und ich melde mich innerhalb einer Stunde bei Ihnen',
+    yourName: 'Ihr Name',
+    enterName: 'Geben Sie Ihren Namen ein',
     name: 'Name',
     phoneNumber: 'Telefonnummer',
     service: 'Dienstleistung',
@@ -83,8 +86,12 @@ export const translations = {
     preferredDate: 'Bevorzugtes Datum',
     message: 'Nachricht',
     messageOptional: 'Nachricht (optional)',
+    additionalWishes: 'Zusätzliche Wünsche',
+    designWishes: 'Beschreiben Sie Ihre Designwünsche...',
     sendRequest: 'Anfrage senden',
     sending: 'Wird gesendet...',
+    socialMedia: 'Soziale Medien',
+    contactConfirmation: 'Wir werden uns innerhalb einer Stunde bei Ihnen melden',
     
     // Footer
     footerDescription: 'Professionelle Nagelkunst mit über 5 Jahren Erfahrung. Ich verwende nur hochwertige Materialien und schaffe einzigartige Designs für jeden Kunden.',
@@ -178,7 +185,10 @@ export const translations = {
     
     // Contact Form
     bookingForm: 'Booking form',
+    bookingTitle: 'Book an appointment',
     bookingFormDescription: 'Fill out the form and I will contact you within an hour',
+    yourName: 'Your name',
+    enterName: 'Enter your name',
     name: 'Name',
     phoneNumber: 'Phone number',
     service: 'Service',
@@ -186,8 +196,12 @@ export const translations = {
     preferredDate: 'Preferred date',
     message: 'Message',
     messageOptional: 'Message (optional)',
+    additionalWishes: 'Additional wishes',
+    designWishes: 'Describe your design wishes...',
     sendRequest: 'Send request',
     sending: 'Sending...',
+    socialMedia: 'Social Media',
+    contactConfirmation: 'We will contact you within an hour',
     
     // Footer
     footerDescription: 'Professional nail art with over 5 years of experience. I use only high-quality materials and create unique designs for each client.',
@@ -281,7 +295,10 @@ export const translations = {
     
     // Contact Form
     bookingForm: 'Форма запису',
+    bookingTitle: 'Записатися на прийом',
     bookingFormDescription: "Заповніть форму і я зв'яжуся з вами протягом години",
+    yourName: "Ваше ім'я",
+    enterName: "Введіть ваше ім'я",
     name: "Ім'я",
     phoneNumber: 'Номер телефону',
     service: 'Послуга',
@@ -289,8 +306,12 @@ export const translations = {
     preferredDate: 'Бажана дата',
     message: 'Повідомлення',
     messageOptional: 'Повідомлення (необов\'язково)',
+    additionalWishes: 'Додаткові побажання',
+    designWishes: 'Опишіть ваші побажання до дизайну...',
     sendRequest: 'Відправити запит',
     sending: 'Відправляється...',
+    socialMedia: 'Соціальні мережі',
+    contactConfirmation: "Ми зв'яжемося з вами протягом години",
     
     // Footer
     footerDescription: 'Професійний nail-арт з понад 5-річним досвідом. Використовую лише високоякісні матеріали та створюю унікальні дизайни для кожного клієнта.',
