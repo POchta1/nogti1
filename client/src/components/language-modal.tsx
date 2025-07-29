@@ -62,11 +62,7 @@ export function LanguageModal() {
           ))}
         </div>
         
-        <div className="mt-6 text-center">
-          <p className="text-xs text-gray-400">
-            Вы можете изменить язык в любое время
-          </p>
-        </div>
+
       </div>
     </div>
   );
