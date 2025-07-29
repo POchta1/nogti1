@@ -129,17 +129,7 @@ export default function ContactSection() {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-dusty-rose rounded-full flex items-center justify-center flex-shrink-0">
-                  <Clock className="text-white" size={20} />
-                </div>
-                <div>
-                  <h4 className="font-medium text-gray-800 mb-1">{t('workingHours')}</h4>
-                  <p className="text-gray-600">
-                    {t('workingHoursText')}
-                  </p>
-                </div>
-              </div>
+              
 
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-dusty-rose rounded-full flex items-center justify-center flex-shrink-0">
