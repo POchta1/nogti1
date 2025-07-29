@@ -12,16 +12,12 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>(() => {
     // Check localStorage first
     const saved = localStorage.getItem('selectedLanguage') as Language;
-    if (saved && ['de', 'en', 'uk', 'ru'].includes(saved)) {
+    if (saved && ['de', 'en', 'uk'].includes(saved)) {
       return saved;
     }
     
-    // Detect browser language
-    const browserLang = navigator.language.toLowerCase();
-    if (browserLang.startsWith('de')) return 'de';
-    if (browserLang.startsWith('uk')) return 'uk';
-    if (browserLang.startsWith('ru')) return 'ru';
-    return 'en'; // Default to English
+    // Default to German as requested
+    return 'de';
   });
 
   useEffect(() => {
