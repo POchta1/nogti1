@@ -34,7 +34,7 @@ const servicesData: ServiceData[] = [
     id: 'classic-manicure',
     nameKey: 'classicManicure',
     descKey: 'classicManicureDesc',
-    price: '2500₽',
+    price: '25€',
     duration: '1.5',
     icon: 'hand-sparkles'
   },
@@ -42,7 +42,7 @@ const servicesData: ServiceData[] = [
     id: 'nail-art',
     nameKey: 'nailArt',
     descKey: 'nailArtDesc',
-    price: '3500₽',
+    price: '35€',
     duration: '2-3',
     icon: 'palette'
   },
@@ -50,7 +50,7 @@ const servicesData: ServiceData[] = [
     id: 'extension',
     nameKey: 'extension',
     descKey: 'extensionDesc',
-    price: '4000₽',
+    price: '40€',
     duration: '2.5',
     icon: 'gem'
   },
@@ -58,7 +58,7 @@ const servicesData: ServiceData[] = [
     id: 'spa-care',
     nameKey: 'spaCare',
     descKey: 'spaCareDesc',
-    price: '3000₽',
+    price: '30€',
     duration: '2',
     icon: 'spa'
   },
@@ -66,7 +66,7 @@ const servicesData: ServiceData[] = [
     id: 'french-manicure',
     nameKey: 'frenchManicure',
     descKey: 'frenchManicureDesc',
-    price: '2800₽',
+    price: '28€',
     duration: '1.5',
     icon: 'heart'
   },
@@ -74,7 +74,7 @@ const servicesData: ServiceData[] = [
     id: 'gel-coating',
     nameKey: 'gelCoating',
     descKey: 'gelCoatingDesc',
-    price: '2200₽',
+    price: '22€',
     duration: '1',
     icon: 'sparkles'
   }
