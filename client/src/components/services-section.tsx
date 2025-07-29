@@ -109,15 +109,15 @@ export default function ServicesSection() {
             return (
               <div
                 key={service.id}
-                className="group bg-gray-50 border-2 border-transparent hover:border-elegant-gold p-6 rounded-3xl transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer flex flex-col h-full"
+                className="group bg-gray-50 border-2 border-transparent hover:border-yellow-500 p-6 rounded-3xl transition-all duration-500 hover:shadow-xl hover:shadow-yellow-500/20 hover:-translate-y-2 cursor-pointer flex flex-col h-full"
               >
                 {/* Icon */}
-                <div className="w-16 h-16 bg-elegant-gold rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                <div className="w-16 h-16 bg-yellow-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
                   <IconComponent className="text-white" size={28} />
                 </div>
 
                 {/* Service Info */}
-                <h3 className="text-xl font-bold text-black mb-4 group-hover:text-elegant-gold transition-colors">
+                <h3 className="text-xl font-bold text-black mb-4 group-hover:text-yellow-600 transition-colors duration-500">
                   {t(service.nameKey)}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
@@ -126,7 +126,7 @@ export default function ServicesSection() {
 
                 {/* Price and Duration */}
                 <div className="flex justify-between items-center mb-6">
-                  <span className="text-2xl font-bold text-black group-hover:text-elegant-gold transition-colors">
+                  <span className="text-2xl font-bold text-black group-hover:text-yellow-600 transition-colors duration-500">
                     от {service.price}
                   </span>
                   <div className="flex items-center text-gray-500 text-sm">
@@ -138,7 +138,7 @@ export default function ServicesSection() {
                 {/* Book Button */}
                 <button
                   onClick={() => openWhatsAppBooking(t(service.nameKey))}
-                  className="w-full bg-black text-white py-3 rounded-2xl font-medium hover:bg-elegant-gold hover:shadow-lg hover:shadow-elegant-gold/30 hover:scale-105 transition-all duration-300 flex items-center justify-center group"
+                  className="w-full bg-black text-white py-3 rounded-2xl font-medium hover:bg-yellow-500 hover:shadow-lg hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-500 flex items-center justify-center group"
                 >
                   {t('bookService')}
                   <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
