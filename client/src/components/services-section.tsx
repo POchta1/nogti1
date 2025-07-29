@@ -8,7 +8,7 @@ import {
   Clock,
   ArrowRight
 } from "lucide-react";
-import { openWhatsAppBooking } from "@/lib/utils";
+import { openWhatsAppBooking, openWhatsAppConsultation } from "@/lib/whatsapp-utils";
 import { useTranslation } from "@/hooks/use-translation";
 
 const iconMap = {
@@ -81,7 +81,7 @@ const servicesData: ServiceData[] = [
 ];
 
 export default function ServicesSection() {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
 
 
 
@@ -137,7 +137,7 @@ export default function ServicesSection() {
 
                 {/* Book Button */}
                 <button
-                  onClick={() => openWhatsAppBooking(t(service.nameKey))}
+                  onClick={() => openWhatsAppBooking(language, t(service.nameKey))}
                   className="w-full bg-black text-white py-3 rounded-2xl font-medium hover:bg-yellow-500 hover:shadow-lg hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-500 flex items-center justify-center group"
                 >
                   {t('bookService')}
@@ -158,7 +158,7 @@ export default function ServicesSection() {
               {t('consultationDescription')}
             </p>
             <button
-              onClick={() => openWhatsAppBooking(t('whatsappConsultation'))}
+              onClick={() => openWhatsAppConsultation(language)}
               className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors font-medium"
             >
               {t('getConsultation')}
