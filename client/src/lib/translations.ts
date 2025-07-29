@@ -53,6 +53,8 @@ export const translations = {
     frenchManicureDesc: 'Elegante klassische French oder moderne Interpretationen mit farbigen Akzenten.',
     gelCoating: 'Gel-Lack-Beschichtung',
     gelCoatingDesc: 'Langanhaltende Gel-Lack-Beschichtung in jedem Farbton. Perfekter Glanz bis zu 3 Wochen.',
+    coatingRemoval: 'Beschichtung entfernen',
+    coatingRemovalDesc: 'Professionelles und schonenderes Entfernen der alten Beschichtung von den Nägeln.',
     
     // Gallery Section
     gallerySubtitle: 'Portfolio',
@@ -164,6 +166,8 @@ export const translations = {
     frenchManicureDesc: 'Elegant classic French or modern interpretations with colored accents.',
     gelCoating: 'Gel Polish Coating',
     gelCoatingDesc: 'Long-lasting gel polish coating in any shade. Perfect shine for up to 3 weeks.',
+    coatingRemoval: 'Coating Removal',
+    coatingRemovalDesc: 'Professional and gentle removal of old coating from nails.',
     
     // Gallery Section
     gallerySubtitle: 'Portfolio',
@@ -275,6 +279,8 @@ export const translations = {
     frenchManicureDesc: 'Елегантний класичний френч або сучасні інтерпретації з кольоровими акцентами.',
     gelCoating: 'Покриття гель-лаком',
     gelCoatingDesc: 'Стійке покриття гель-лаком будь-якого відтінку. Бездоганний блиск до 3 тижнів.',
+    coatingRemoval: 'Зняття покриття',
+    coatingRemovalDesc: 'Професійне та бережне зняття старого покриття з нігтів.',
     
     // Gallery Section
     gallerySubtitle: 'Портфоліо',
