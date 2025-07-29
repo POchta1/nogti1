@@ -173,7 +173,7 @@ export default function ServicesSection() {
                   className="group bg-gray-50 border-2 border-transparent hover:border-yellow-500 p-7 rounded-2xl transition-all duration-500 hover:shadow-xl hover:shadow-yellow-500/20 hover:-translate-y-2 cursor-pointer flex flex-col h-full"
                 >
                   {/* Icon */}
-                  <div className="w-18 h-18 bg-yellow-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                  <div className="w-20 h-20 bg-yellow-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
                     <IconComponent className="text-white" size={26} />
                   </div>
 
