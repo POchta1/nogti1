@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <div className="font-playfair text-3xl font-bold text-dusty-rose mb-4">
+            <div className="text-3xl font-bold text-dusty-rose mb-4">
               Solo Miia
             </div>
             <p className="text-gray-400 leading-relaxed">
@@ -24,7 +24,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-playfair text-xl font-bold mb-4">{t('services')}</h4>
+            <h4 className="text-xl font-bold mb-4">{t('services')}</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <button
@@ -62,7 +62,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-playfair text-xl font-bold mb-4">{t('contactTitle')}</h4>
+            <h4 className="text-xl font-bold mb-4">{t('contactTitle')}</h4>
             <div className="space-y-2 text-gray-400">
               <p>{t('addressText')}</p>
               <p>+43 664 93020595</p>
