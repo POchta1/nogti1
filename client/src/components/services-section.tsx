@@ -42,7 +42,7 @@ const servicesData: ServiceData[] = [
     id: 'nail-art',
     nameKey: 'nailArt',
     descKey: 'nailArtDesc',
-    price: '35€',
+    price: 'от 40€',
     duration: '2-3',
     icon: 'palette'
   },
@@ -58,7 +58,7 @@ const servicesData: ServiceData[] = [
     id: 'french-manicure',
     nameKey: 'frenchManicure',
     descKey: 'frenchManicureDesc',
-    price: '28€',
+    price: 'от 33€',
     duration: '1.5',
     icon: 'heart'
   },
