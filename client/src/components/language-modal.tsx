@@ -34,7 +34,7 @@ export function LanguageModal() {
             <img 
               src={logoImage} 
               alt="Solo Miia Logo" 
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain rounded-full"
             />
           </div>
         </div>
