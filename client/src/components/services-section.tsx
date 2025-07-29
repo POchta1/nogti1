@@ -163,46 +163,47 @@ export default function ServicesSection() {
           </div>
 
           {/* Second row - 4 services */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
             {servicesData.slice(3).map((service) => {
               const IconComponent = iconMap[service.icon];
               
               return (
                 <div
                   key={service.id}
-                  className="group bg-gray-50 border-2 border-transparent hover:border-yellow-500 p-7 rounded-2xl transition-all duration-500 hover:shadow-xl hover:shadow-yellow-500/20 hover:-translate-y-2 cursor-pointer flex flex-col h-full"
+                  className="group bg-gray-50 border-2 border-transparent hover:border-yellow-500 p-4 sm:p-5 md:p-7 rounded-xl sm:rounded-2xl transition-all duration-500 hover:shadow-xl hover:shadow-yellow-500/20 hover:-translate-y-2 cursor-pointer flex flex-col h-full"
                 >
                   {/* Icon */}
-                  <div className="w-20 h-20 bg-yellow-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                    <IconComponent className="text-white" size={26} />
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-yellow-500 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4 md:mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                    <IconComponent className="text-white w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
                   </div>
 
                   {/* Service Info */}
-                  <h3 className="text-xl font-bold text-black mb-4 group-hover:text-yellow-600 transition-colors duration-500 leading-tight">
+                  <h3 className="text-sm sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3 md:mb-4 group-hover:text-yellow-600 transition-colors duration-500 leading-tight">
                     {t(service.nameKey)}
                   </h3>
-                  <p className="text-gray-600 text-base leading-relaxed mb-6 flex-grow">
+                  <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed mb-3 sm:mb-4 md:mb-6 flex-grow">
                     {t(service.descKey)}
                   </p>
 
                   {/* Price and Duration */}
-                  <div className="flex justify-between items-center mb-6">
-                    <span className="text-2xl font-bold text-black group-hover:text-yellow-600 transition-colors duration-500">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 sm:mb-4 md:mb-6 gap-1 sm:gap-0">
+                    <span className="text-lg sm:text-xl md:text-2xl font-bold text-black group-hover:text-yellow-600 transition-colors duration-500">
                       {service.price.startsWith('от') ? service.price.replace('от', t('from')) : service.price}
                     </span>
-                    <div className="flex items-center text-gray-500 text-base">
-                      <Clock size={18} className="mr-1" />
-                      {service.duration}
+                    <div className="flex items-center text-gray-500 text-xs sm:text-sm md:text-base">
+                      <Clock className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 mr-1" />
+                      {service.duration}ч
                     </div>
                   </div>
 
                   {/* Book Button */}
                   <button
                     onClick={() => openWhatsAppBooking(language, t(service.nameKey))}
-                    className="w-full bg-black text-white py-4 rounded-xl text-base font-medium hover:bg-yellow-500 hover:shadow-lg hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-500 flex items-center justify-center group"
+                    className="w-full bg-black text-white py-2 sm:py-3 md:py-4 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-medium hover:bg-yellow-500 hover:shadow-lg hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-500 flex items-center justify-center group"
                   >
-                    {t('bookService')}
-                    <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                    <span className="hidden sm:inline">{t('bookService')}</span>
+                    <span className="sm:hidden">Заказать</span>
+                    <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 ml-1 sm:ml-2 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
               );

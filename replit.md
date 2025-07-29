@@ -99,6 +99,13 @@ The current setup includes in-memory storage as a fallback, making it easy to de
 - WhatsApp messages now sent in selected language
 - Fixed service cards layout to ensure equal heights
 
+**29.07.2025** - Mobile UI Optimization  
+- Improved mobile responsiveness for services section second row
+- Enhanced adaptive sizing for icons, text, and spacing across devices
+- Optimized price/duration layout for mobile screens (vertical on mobile, horizontal on desktop)
+- Shortened button text for mobile ("Заказать" instead of full text)
+- Fixed TypeScript errors with Lucide icon sizing
+
 **29.07.2025** - Project Migration & Service Updates
 - Successfully migrated project from Replit Agent to Replit environment
 - Verified proper client/server separation and security practices
