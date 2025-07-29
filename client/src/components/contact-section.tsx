@@ -267,10 +267,6 @@ export default function ContactSection() {
                 </Button>
               </form>
             </Form>
-
-            <p className="text-sm text-gray-500 mt-4 text-center">
-              {t('contactConfirmation')}
-            </p>
           </div>
         </div>
       </div>
